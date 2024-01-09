@@ -34,12 +34,12 @@ const TabsForm = () => {
 
 
 const [formData, setFormData] = useState({
-    nameSoftware: " ",
-    emailSoftware: " ",
-    messageSoftware: " ",
-    nameArt: " ",
-    emailArt: " ",
-    messageArt: " ",
+    nameSoftware: "a ",
+    emailSoftware: " b",
+    messageSoftware: " d",
+    nameArt: "d ",
+    emailArt: " e",
+    messageArt: " f",
 });
 
 
