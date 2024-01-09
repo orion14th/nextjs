@@ -1,5 +1,5 @@
 
-import mysql from 'mysql'; // Import MySQL driver
+  import mysql from 'mysql'; // Import MySQL driver
 
 // Database credentials (replace with your values)
 const dbConfig = {

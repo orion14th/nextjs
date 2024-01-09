@@ -55,8 +55,23 @@ console.log(formData);
 
 
 const handleFormSubmit = async () => {
- 
-     console.log(formData);
+    try {
+      const response = await fetch('/api/submitForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+      } else {
+        console.error('Error submitting form:', response.status);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+    }
   };
 
 
