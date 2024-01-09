@@ -15,9 +15,9 @@ export default async function handler(req, res) {
   // Database credentials (replace with your values)
   const dbConfig = {
     host: 'localhost',
-    user: 'crggiib_db222503',
-    password: '2hDNUhU*cddgki38',
-    database: 'crggiib_db222503_learno_churno',
+    user: 'root',
+    password: '%ic(yMa6IA51&fiOk1',
+    database: 'aaa',
   };
 
   let connection;

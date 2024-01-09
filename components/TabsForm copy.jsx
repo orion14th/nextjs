@@ -34,12 +34,12 @@ const TabsForm = () => {
 
 
 const [formData, setFormData] = useState({
-    nameSoftware: "",
-    emailSoftware: "",
-    messageSoftware: "",
-    nameArt: "",
-    emailArt: "",
-    messageArt: "",
+    nameSoftware: "a",
+    emailSoftware: "a",
+    messageSoftware: "a",
+    nameArt: "a",
+    emailArt: "a",
+    messageArt: "a",
 });
 
 const handleFormChange = (e) => {
@@ -91,7 +91,7 @@ const handleFormSubmit = async () => {
     <CardContent className="space-y-2">
       <div className="space-y-1">
         <Label htmlFor="nameSoftware">Name</Label>
-        <Input onChange={handleFormChange}  id="nameSoftware" defaultValue={formData.nameSoftware} value={formData.nameSoftware} />
+        <Input onChange={handleFormChange}  id="nameSoftware" defaultValue={formData.nameSoftware} value={`ppp`} />
       </div>
       <div className="space-y-1">
         <Label htmlFor="emailSoftware">Email</Label>
@@ -133,7 +133,7 @@ const handleFormSubmit = async () => {
     <CardContent className="space-y-2">
       <div className="space-y-1">
         <Label htmlFor="nameArt">Name</Label>
-        <Input onChange={handleFormChange}  id="nameArt"   defaultValue={formData.nameArt} value={formData.messagnameArteSoftware}  />
+        <Input onChange={handleFormChange}  id="nameArt"   defaultValue={formData.nameArt} value={formData.nameArt}  />
       </div>
       <div className="space-y-1">
         <Label htmlFor="emailArt">Email</Label>

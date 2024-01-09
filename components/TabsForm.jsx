@@ -34,13 +34,15 @@ const TabsForm = () => {
 
 
 const [formData, setFormData] = useState({
-    nameSoftware: "",
-    emailSoftware: "",
-    messageSoftware: "",
-    nameArt: "",
-    emailArt: "",
-    messageArt: "",
+    nameSoftware: " ",
+    emailSoftware: " ",
+    messageSoftware: " ",
+    nameArt: " ",
+    emailArt: " ",
+    messageArt: " ",
 });
+
+
 
 const handleFormChange = (e) => {
 
@@ -91,11 +93,11 @@ const handleFormSubmit = async () => {
     <CardContent className="space-y-2">
       <div className="space-y-1">
         <Label htmlFor="nameSoftware">Name</Label>
-        <Input onChange={handleFormChange}  id="nameSoftware" defaultValue={formData.nameSoftware} value={formData.nameSoftware} />
+        <Input onChange={handleFormChange}  id="nameSoftware" value={formData.nameSoftware} />
       </div>
       <div className="space-y-1">
         <Label htmlFor="emailSoftware">Email</Label>
-        <Input onChange={handleFormChange}  id="emailSoftware"  defaultValue={formData.emailSoftware} value={formData.emailSoftware} />
+        <Input onChange={handleFormChange}  id="emailSoftware"    value={formData.emailSoftware} />
  
       </div>
 
@@ -111,7 +113,7 @@ const handleFormSubmit = async () => {
 
       <div className="space-y-1">
         <Label htmlFor="messageSoftware">Message</Label>
-        <Input onChange={handleFormChange}  id="messageSoftware"  defaultValue={formData.messageSoftware} value={formData.messageSoftware} />
+        <Input onChange={handleFormChange}  id="messageSoftware"    value={formData.messageSoftware} />
  
       </div>
 
@@ -133,11 +135,11 @@ const handleFormSubmit = async () => {
     <CardContent className="space-y-2">
       <div className="space-y-1">
         <Label htmlFor="nameArt">Name</Label>
-        <Input onChange={handleFormChange}  id="nameArt"   defaultValue={formData.nameArt} value={formData.messagnameArteSoftware}  />
+        <Input onChange={handleFormChange}  id="nameArt"    value={formData.nameArt}  />
       </div>
       <div className="space-y-1">
         <Label htmlFor="emailArt">Email</Label>
-        <Input onChange={handleFormChange}  id="emailArt"   defaultValue={formData.emailArt} value={formData.emailArt} />
+        <Input onChange={handleFormChange}  id="emailArt"   value={formData.emailArt} />
       </div>
 
      
@@ -152,7 +154,7 @@ const handleFormSubmit = async () => {
 
       <div className="space-y-1">
         <Label htmlFor="messageArt">Message</Label>
-        <Input onChange={handleFormChange}  id="messageArt"   defaultValue={formData.messageArt} value={formData.messageArt} />
+        <Input onChange={handleFormChange}  id="messageArt"    value={formData.messageArt} />
  
       </div>
 
