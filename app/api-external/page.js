@@ -6,8 +6,7 @@
    
  import { useContext,useEffect,useRef } from 'react';
  import { TitleContext } from '@/components/TitleContext';
- import { Button } from "@/components/ui/button"
-import Link from 'next/link'
+
   
  
  export default function Home() {
@@ -17,9 +16,12 @@ import Link from 'next/link'
  
    const isTitleUpdated = useRef(false); // Track title updates
  
+
+   setTitle('3rd Party Api');
+
    useEffect(() => {
  
-     setTitle('3rd Party Api');
+   
  
        if (!isTitleUpdated.current) {
            isTitleUpdated.current = true;

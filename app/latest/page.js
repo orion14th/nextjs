@@ -25,13 +25,15 @@
     export default function Home() {
     
       const { setTitle } = useContext(TitleContext);
-    
+      setTitle('Latest');
     
       const isTitleUpdated = useRef(false); // Track title updates
     
+   
+
       useEffect(() => {
     
-        setTitle('Latest');
+   
     
           if (!isTitleUpdated.current) {
               isTitleUpdated.current = true;

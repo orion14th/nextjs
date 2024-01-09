@@ -14,13 +14,13 @@
     export default function Home() {
     
       const { setTitle } = useContext(TitleContext);
-    
+      setTitle('Blank');
     
       const isTitleUpdated = useRef(false); // Track title updates
     
       useEffect(() => {
     
-        setTitle('Blank');
+   
     
           if (!isTitleUpdated.current) {
               isTitleUpdated.current = true;

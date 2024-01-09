@@ -14,13 +14,13 @@
  export default function Home() {
  
    const { setTitle } = useContext(TitleContext);
- 
+   setTitle('Wordpress Api');
  
    const isTitleUpdated = useRef(false); // Track title updates
  
    useEffect(() => {
  
-     setTitle('Wordpress Api');
+
  
        if (!isTitleUpdated.current) {
            isTitleUpdated.current = true;

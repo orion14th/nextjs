@@ -29,10 +29,11 @@ export default function Home() {
 
 
   const isTitleUpdated = useRef(false); // Track title updates
+  setTitle('Portfolio');
 
   useEffect(() => {
 
-    setTitle('Portfolio');
+
 
       if (!isTitleUpdated.current) {
           isTitleUpdated.current = true;

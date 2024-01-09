@@ -13,13 +13,13 @@ import TabsForm from '@/components/TabsForm';
 export default function Home() {
 
   const { setTitle } = useContext(TitleContext);
-
+  setTitle('More');
 
   const isTitleUpdated = useRef(false); // Track title updates
 
   useEffect(() => {
 
-    setTitle('More');
+
 
       if (!isTitleUpdated.current) {
           isTitleUpdated.current = true;

@@ -11,13 +11,13 @@ import { TitleContext } from '@/components/TitleContext';
 export default function Home() {
 
   const { setTitle } = useContext(TitleContext);
-
+  setTitle('Home');
 
   const isTitleUpdated = useRef(false); // Track title updates
 
   useEffect(() => {
 
-    setTitle('Home');
+ 
 
       if (!isTitleUpdated.current) {
           isTitleUpdated.current = true;
