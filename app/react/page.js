@@ -14,10 +14,11 @@ export default function Home() {
 
 
   const isTitleUpdated = useRef(false); // Track title updates
+  setTitle('React');
 
   useEffect(() => {
 
-    setTitle('React');
+  
 
       if (!isTitleUpdated.current) {
           isTitleUpdated.current = true;
