@@ -1,5 +1,5 @@
 'use client';
-import { useRef,useContext } from 'react';
+import { useRef,useContext,useState } from 'react';
 import Link from 'next/link'
 import { Separator } from "@/components/ui/separator"
 
@@ -18,16 +18,40 @@ import {
 } from "@/components/ui/sheet"
 
  
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
  
 
 import {TitleContext}from '@/components/TitleContext';
+
+ 
+ 
 
 
  
 
 export default function Hamburger() {
  
+  
+
+
  
+  const [isLoading, setIsLoading] = useState(2);
+
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+});
+
+
+
+
 
   const sheetRef = useRef(null);
 
@@ -45,7 +69,50 @@ export default function Hamburger() {
 
  
 
-   
+  const handleFormChange = (e) => {
+
+
+
+    setFormData({
+        ...formData,
+        [e.target.id]: e.target.value,
+    })
+    
+console.log(formData);
+
+}
+
+
+const handleFormSubmit = async () => {
+  
+  setIsLoading(0);
+
+
+    try {
+      const response = await fetch('/api/submitNewsletterForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        setTimeout(  ()=>{setIsLoading(1);}, 1000) ;  
+        setTimeout(  ()=>{setIsLoading(3);}, 3000) ; 
+        
+      } else {
+        console.error('Error submitting form:', response.status);
+        setTimeout(  ()=>{setIsLoading(1);}, 1000) ;  
+        setTimeout(  ()=>{setIsLoading(3);}, 3000) ; 
+       
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+    }
+  };
+
 
   return (
 
@@ -129,41 +196,107 @@ export default function Hamburger() {
 
   <div className="animate__animated animate__fadeIn  animate__delay-1s menu-footer  fixed bottom-0      gap-4   ">
 
-  <SheetTitle>Newsletter</SheetTitle>
-          <SheetDescription>
-          <div className="h2_sub"> Join Our Mailing List! </div>
-          </SheetDescription>
-   
-        <div className="grid gap-4 py-4">
-          
-        <Separator />
-     <div className="footer-spacer"> &nbsp; </div>
+  
+
+
+ 
+          {isLoading<2 && (
+
+
+
+<div className="flex flex-col items-center justify-center  gap-5 ">   
+
+<div className="mainDivInner row-span-3 md:row-span-1"> 
+
+  
+
+</div>
+</div>
+
+)}
+
+
+
+<Dialog>
+
+{isLoading==2 && (
+<>
+<SheetTitle>Newsletter</SheetTitle>
+<SheetDescription>
+<div className="h2_sub"> Join Our Mailing List! </div>
+</SheetDescription>
+
+<div className="grid gap-4 py-4">
+
+<Separator />
+<div className="footer-spacer"> &nbsp; </div>
+
+
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input id="name"  placeholder='your name'  value={formData.name} onChange={handleFormChange} className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+            <Label htmlFor="email" className="text-right">
               Email
             </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+            <Input id="email" placeholder='email@mgmail.com'  value={formData.email} onChange={handleFormChange}  className="col-span-3" />
           </div>
 
+<SheetFooter>
+<SheetClose asChild>
+     <DialogTrigger asChild>
+  <Button type="submit" onClick={handleFormSubmit} >Submit</Button>
+  </DialogTrigger>
+</SheetClose>
+
+</SheetFooter>
+     
+</div>  
+        
+</>
+       
+
+     )}
 
 
-          <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Submit</Button>
-          </SheetClose>
+
+{isLoading==3 && (
+ 
+<SheetFooter>
+ 
+ 
+</SheetFooter>
+ 
+       
+
+     )}
+
+   
+    
+  
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Thank You!</DialogTitle>
+          <DialogDescription>
+          You wil be included in our next additon of Newsletters.
+          </DialogDescription>
+        </DialogHeader>
+    
       
-        </SheetFooter>
-        </div>  
-        
-        
-        
-          </div>
+      </DialogContent>
+    </Dialog>
+
+
+
+
+ 
+
+ 
+</div>
+    
        
       </SheetContent>
     </Sheet>

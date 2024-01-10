@@ -28,23 +28,30 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 
+
+
+import LoadingComponent from '@/components/LoadingComponent';
  
+
+
 const TabsForm = () => {
 
-
+  const [isLoading, setIsLoading] = useState(2);
 
 const [formData, setFormData] = useState({
-    nameSoftware: "a ",
-    emailSoftware: " b",
-    messageSoftware: " d",
-    nameArt: "d ",
-    emailArt: " e",
-    messageArt: " f",
+    nameSoftware: "",
+    emailSoftware: "",
+    messageSoftware: "",
+    nameArt: "",
+    emailArt: "",
+    messageArt: "",
 });
 
 
 
 const handleFormChange = (e) => {
+
+
 
     setFormData({
         ...formData,
@@ -57,6 +64,9 @@ console.log(formData);
 
 
 const handleFormSubmit = async () => {
+
+  setIsLoading(0);
+
     try {
       const response = await fetch('/api/submitForm', {
         method: 'POST',
@@ -68,8 +78,14 @@ const handleFormSubmit = async () => {
 
       if (response.ok) {
         console.log('Form submitted successfully');
+        setTimeout(  ()=>{setIsLoading(1);}, 1000) ;  
+        setTimeout(  ()=>{setIsLoading(3);}, 3000) ; 
+        setTimeout(  ()=>{setIsLoading(2);}, 5000) ; 
       } else {
         console.error('Error submitting form:', response.status);
+        setTimeout(  ()=>{setIsLoading(1);}, 1000) ;  
+        setTimeout(  ()=>{setIsLoading(3);}, 3000) ; 
+        setTimeout(  ()=>{setIsLoading(2);}, 5000) ; 
       }
     } catch (error) {
       console.error('Network error:', error);
@@ -78,7 +94,11 @@ const handleFormSubmit = async () => {
 
 
     return(
-<><Tabs defaultValue="software" className="w-[400px]">
+<>
+
+{isLoading==2 && (
+
+<Tabs defaultValue="software" className="w-[400px]">
 <TabsList className="grid w-full grid-cols-2">
   <TabsTrigger value="software">Software</TabsTrigger>
   <TabsTrigger value="art">Art</TabsTrigger>
@@ -166,7 +186,37 @@ const handleFormSubmit = async () => {
     </CardFooter>
   </Card>
 </TabsContent>
-</Tabs> </>
+</Tabs>  )}
+
+
+{isLoading<2 && (
+
+
+<div className="flex flex-col items-center justify-center  gap-5 ">   
+
+<div className="mainDivInner row-span-3 md:row-span-1"> 
+
+  <LoadingComponent loading={isLoading} />
+
+</div>
+</div>
+
+)}
+
+{isLoading==3 && (
+
+<div className="flex flex-col items-center justify-center  gap-5 ">   
+
+<div className="mainDivInner row-span-3 md:row-span-1"> 
+
+ <h2>Thank You!</h2>
+
+</div>
+</div>
+
+
+)}
+</>
 
 
 )  
