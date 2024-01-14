@@ -11,7 +11,7 @@ import React, { useState, useEffect } from 'react';
       CarouselPrevious,
     } from "@/components/ui/carousel"
 
-    import Autoplay from "embla-carousel-autoplay"
+  
     import useEmblaCarousel from 'embla-carousel-react'
  
     import LoadingComponent from '@/components/LoadingComponent';
@@ -70,10 +70,10 @@ console.log(`loading number ${isImagesLoading}`);
     useEffect(() => {
     
      
-      const lastFetchTime = localStorage.getItem('lastFetchTime');
-     // const shouldFetch = lastFetchTime === null || Date.now() - Number(lastFetchTime) >= 60 * 1000;
+     const lastFetchTime = localStorage.getItem('lastFetchTime');
+      const shouldFetch = lastFetchTime === null || Date.now() - Number(lastFetchTime) >= 60 * 1000;
     
-     const shouldFetch=true;
+     //const shouldFetch=true;
     
       // Fetch images from API if not already in local storage
       if (!localStorage.getItem('images') || shouldFetch) {
@@ -143,7 +143,7 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
                 <div className="p-1">
                   <Card>
                     <CardContent className="CardContentComponent flex aspect-square items-center justify-center p-6">
-                      <span className="text-2xl font-semibold">   <Image onLoad={handleImageLoad} className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} />    </span>
+                      <span className="text-2xl font-semibold">   <Image onLoad={handleImageLoad} className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority  />    </span>
                     </CardContent>
                   </Card>
                 </div>
