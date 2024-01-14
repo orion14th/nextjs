@@ -129,10 +129,12 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
 <h2 className="pageTitle">Unsplash Api</h2>
 </div>
         <div className="mainDivInner  row-span-3 md:row-span-1"> 
-
-
-
+ 
+ 
         {images.length > 0 && (
+
+
+
         <Carousel  ref={emblaRef} className="CarouseComponent   animate__animated animate__fadeIn " >
           <CarouselContent className="CarouselContentComponent -ml-1">
 

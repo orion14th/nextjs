@@ -223,7 +223,7 @@ const handleFormSubmit = async () => {
 <>
 <SheetTitle>Newsletter</SheetTitle>
 <SheetDescription>
-<div className="h2_sub"> Join Our Mailing List! </div>
+<div className="h2_sub h2_newsletter"> Join Our Mailing List! </div>
 </SheetDescription>
 
 <div className="grid gap-4 py-4">

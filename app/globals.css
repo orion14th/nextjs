@@ -530,13 +530,25 @@ button {
 
 
 @media screen and (max-height:700px) {
-   .smallHeight {
- display: none;
+
+ 
+  .smallHeight,.h2_newsletter {
+    display: none;
+   }
+   
+   .menu-footer h2 {
+    padding: 0em;
+}
+  .pageTitle {
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 1.7em;
+    text-align: center;
 }
 
 .quoted {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .scrollOnMobile {
