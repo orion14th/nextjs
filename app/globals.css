@@ -526,9 +526,13 @@ button {
   height: 75vh;
  
 }
-
+.loadingScreenLoader {
+  margin-top: -90px;
+ 
+}
 
 @media screen and (max-height:700px) {
+
 
   .gapProfile1{
     gap:1.9em;
