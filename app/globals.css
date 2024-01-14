@@ -343,12 +343,11 @@ a.menuLinkMobile {
 
 
 
-.pageTitle{
-  font-size: 2em;
+.pageTitle {
+  font-size: 3em;
   font-weight: 600;
   text-align: center;
 }
-
 
 
 
@@ -531,6 +530,9 @@ button {
 
 @media screen and (max-height:700px) {
 
+  .gapProfile1{
+    gap:1.7em;
+  }
  
   .smallHeight,.h2_newsletter {
     display: none;
