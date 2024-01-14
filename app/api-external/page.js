@@ -8,6 +8,9 @@
  import { TitleContext } from '@/components/TitleContext';
 
   
+
+
+ 
  
  export default function Home() {
  
@@ -43,7 +46,8 @@
         <div className="container mx-auto">
   <div className="flex flex-wrap -mx-4 ">
 
-  <ApiExternalImage />
+ 
+  <ApiExternalImage numberOfImages={5}  numbersToPreload={3} />
 
   </div>
 </div>  

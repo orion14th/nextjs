@@ -19,7 +19,7 @@ import React, { useState, useEffect } from 'react';
 
  
  
-    const ImageSlider = () => {
+    const ImageSlider = (props) => {
 
 
  
@@ -39,8 +39,8 @@ import React, { useState, useEffect } from 'react';
       // Fetch images using Next.js's fetch with revalidation
     
       const unsplashAccessKey = 'W4oBf7UVziIqyfjv9Qm6cLJH9Trzbec20B1DXUdfIDE'; // Replace with your Unsplash access key
-      const numberOfImages = 5;
-      const numbersToPreload = 3;
+      const numberOfImages = props.numberOfImages || 5; // Default to 5 imag
+      const numbersToPreload = props.numbersToPreload || 3; // Default to 3 imag
 
  
        
@@ -73,7 +73,7 @@ console.log(`loading number ${isImagesLoading}`);
      const lastFetchTime = localStorage.getItem('lastFetchTime');
       const shouldFetch = lastFetchTime === null || Date.now() - Number(lastFetchTime) >= 60 * 1000;
     
-     //const shouldFetch=true;
+    console.log(`shouldFetch ${shouldFetch}`);
     
       // Fetch images from API if not already in local storage
       if (!localStorage.getItem('images') || shouldFetch) {
@@ -95,13 +95,19 @@ console.log(`loading number ${isImagesLoading}`);
             localStorage.setItem('lastFetchTime', Date.now());
 
 // Set Loading to 1 to fade after 1 second, and 2 to hide after 2 seconds
+const lastFetchTime = localStorage.getItem('lastFetchTime');
+ 
 
+console.log(`shouldFetchxxxx ${shouldFetch}`);
  
 
 
           })
           .catch((error) => console.error('Error fetching images:', error));
       } else {
+
+console.log('images already in local storage');
+
         const storedImages = JSON.parse(localStorage.getItem('images'));
         setImages(storedImages.map((image) => image.urls.regular));
         

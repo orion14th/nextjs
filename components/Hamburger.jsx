@@ -186,6 +186,9 @@ const handleFormSubmit = async () => {
         <SheetClose asChild><Link className="menuLinkMobile" href="./react"   onClick={handleCloseLinkClick}   >React</Link> 
         </SheetClose></div>
 
+        <div className="flex items-center justify-center p-4">
+        <SheetClose asChild><Link className="menuLinkMobile" href="./api-external-ssr"   onClick={handleCloseLinkClick}   >SSR</Link> 
+        </SheetClose></div>
 
 
 </div>
@@ -236,13 +239,13 @@ const handleFormSubmit = async () => {
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name"  placeholder='your name' tabindex="-1"  value={formData.name} onChange={handleFormChange} className="col-span-3" />
+            <Input id="name"  placeholder='your name' tabIndex="-1"  value={formData.name} onChange={handleFormChange} className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="email" className="text-right">
               Email
             </Label>
-            <Input id="email" placeholder='email@mgmail.com' tabindex="-1"   value={formData.email} onChange={handleFormChange}  className="col-span-3" />
+            <Input id="email" placeholder='email@mgmail.com' tabIndex="-1"   value={formData.email} onChange={handleFormChange}  className="col-span-3" />
           </div>
 
 <SheetFooter>
