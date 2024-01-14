@@ -62,7 +62,7 @@ Glad You Made It.</p>
 
 
 
-      <div className="row-span-3 md:row-span-1"> <Link href="./more"> <Button   variant="outline" >Ask a Question</Button>   </Link> </div>
+      <div className="container mx-auto text-center"> <Link href="./more"> <Button   variant="outline" >Ask a Question</Button>   </Link> </div>
     
   
 </main>
