@@ -379,6 +379,10 @@ a.menuLinkMobile {
 }
 
 
+h3.CarouselSubtitle {
+  padding-bottom: 1em;
+}
+
  @media (max-width:2500) {
   .CarouselLargeComponent{
    width:2000px;
@@ -571,12 +575,12 @@ body {
 @media (max-width:500px) {
  
 
-  .CarouselMixedSingleComponent {
+  .CarouselMixedSingleComponent,.CarouselLargeComponent {
     width: auto;
     max-width: 100%;
 }
 
-.CarouselMixedSingleComponent img {
+.CarouselMixedSingleComponent img,.CarouselLargeComponent img{
   width: 300px;
   height: auto;
 }
@@ -597,10 +601,7 @@ body {
   /* max-width: 100% !important; */
 }
 
-  .CarouselLargeComponent {
-    width: 100%;
-    max-width: 100%;
-}
+ 
   .scrollOnMobile {
     justify-content: flex-start;
     height: 90vh;

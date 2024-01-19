@@ -25,12 +25,12 @@ import { TitleContext } from '@/components/TitleContext';
 
 export default function Home() {
 
-const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/IMG_0300.jpg',''];
+const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/IMG_0300.jpg','','/images/portfolio/Z&S.png'];
 //const myContentArray=['Artwork','Real-Time Drawing','Real-Time Drawing','Fun With Words','AI + Education','Rough Drafts','Content Creation','New Photos','Upcoming Shows','Collaborations','test2','test2','test2','test2','test2','test2','test2','test2','test2','test9'];
 
-const myContentArray=['Fun With Words','AI + Art','Real-Time Drawing','Artwork','Real-Time Drawing'];
+const myContentArray=['Fun With Words','AI + Art','Real-Time Drawing','Artwork','Real-Time Drawing','Website Revamp'];
 
-const myLinksArray=['https://www.youtube.com/embed/Eurwylh0EI0?si=7PIHKezz1FwnLeZg','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/embed/H3xQ5hfMD-w?si=XW65RFjCk8OtpyXM','./art','https://www.youtube.com/embed/SZjz8t_d_gc?si=-L__QO1gcP_UWaz'];
+const myLinksArray=['https://www.youtube.com/embed/Eurwylh0EI0?si=7PIHKezz1FwnLeZg','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/embed/H3xQ5hfMD-w?si=XW65RFjCk8OtpyXM','./art','https://www.youtube.com/embed/SZjz8t_d_gc?si=-L__QO1gcP_UWaz','https://zacharyandsons.com/'];
 
 
   const { setTitle } = useContext(TitleContext);
@@ -78,7 +78,7 @@ const myLinksArray=['https://www.youtube.com/embed/Eurwylh0EI0?si=7PIHKezz1FwnLe
           
           <CarouselItem key={index} className="CarouselItemComponent pl-1 sm:basis-1/1 md:basis-1/1 lg:basis-1/1">
             <div className="p-1">
-            <div className="mainDivInner  row-span-3 md:row-span-1"> <h3>{myContentArray[index]}</h3>  </div>
+            <div className="mainDivInner  row-span-3 md:row-span-1"> <h3 className="CarouselSubtitle">{myContentArray[index]}</h3>  </div>
    
   
           { myLinksArray[index].indexOf('http') >-1 ? (
