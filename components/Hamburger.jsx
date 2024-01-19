@@ -186,9 +186,7 @@ const handleFormSubmit = async () => {
         <SheetClose asChild><Link className="menuLinkMobile" href="./react"   onClick={handleCloseLinkClick}   >React</Link> 
         </SheetClose></div>
 
-        <div className="flex items-center justify-center p-4">
-        <SheetClose asChild><Link className="menuLinkMobile" href="./api-external-ssr"   onClick={handleCloseLinkClick}   >SSR</Link> 
-        </SheetClose></div>
+      
 
 
 </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-    import Image from 'next/image'; // Import Image component for optimized image handling
-    
+    import Image from 'next/image';  
  
     import { Card, CardContent } from "@/components/ui/card"
     import {
