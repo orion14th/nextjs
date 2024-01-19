@@ -26,12 +26,12 @@ import { TitleContext } from '@/components/TitleContext';
 
 export default function Home() {
 
-const myPictureArray = ['/images/portfolio/beingyou.png','/images/portfolio/freightway.png','/images/portfolio/freightway-2.png','/images/portfolio/Z&S.png','/images/portfolio/casalogy.png','/images/portfolio/netwaiter.png','/images/portfolio/grander.png','/images/portfolio/AITR.png','/images/portfolio/AITR-2.png','/images/portfolio/PhotoStudio.png','/images/portfolio/SS.png','/images/portfolio/wellpeople.png'];
+const myPictureArray = ['/images/portfolio/JPEG/beingyou.jpg','/images/portfolio/JPEG/freightway.jpg','/images/portfolio/JPEG/freightway-2.jpg','/images/portfolio/JPEG/Z&S.jpg','/images/portfolio/JPEG/casalogy.jpg','/images/portfolio/JPEG/netwaiter.jpg','/images/portfolio/JPEG/grander.jpg','/images/portfolio/JPEG/AITR.jpg','/images/portfolio/JPEG/AITR-2.jpg','/images/portfolio/JPEG/PhotoStudio.jpg','/images/portfolio/JPEG/SS.jpg','/images/portfolio/JPEG/wellpeople.jpg'];
 
 const myContentArray=['Being You App','Freightway','Freightway','Zachary and Sons Homes','Casalogy','Netwaiter','Grander Foods','Art in the Raw','Art in the Raw','The Photography Studio','Symphonic Soul','Well People'];
 
 
-const myLinksArray=['https://beingyouapp.com/','#','#','https://zacharyandsons.com/','https://casalogy.com/','https://netwaiter.net/','https://granderfoods.com/','https://artintheraw.net/','https://artintheraw.net/','https://thephotostudio.com/','https://symphonicsoul.net/','https://wellpeople.com'];
+const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https://freightway.co/','https://zacharyandsons.com/','https://casalogy.com/','https://netwaiter.net/','https://granderfoods.com/','https://artintheraw.net/','https://artintheraw.net/','https://thephotostudio.com/','https://symphonicsoul.net/','https://wellpeople.com'];
 
   const { setTitle } = useContext(TitleContext);
 
@@ -103,7 +103,7 @@ const myLinksArray=['https://beingyouapp.com/','#','#','https://zacharyandsons.c
 ):(
   <Card> 
   <CardContent className="CarouselLargeComponent  flex   items-center justify-center p-8">
-      <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={500} height={300}   />    
+      <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}   />    
 
 
   </CardContent> 

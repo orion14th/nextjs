@@ -104,7 +104,7 @@ const myLinksArray=['https://www.youtube.com/embed/Eurwylh0EI0?si=7PIHKezz1FwnLe
 ):(
   <Card> 
   <CardContent className="CarouselMixedSingleComponent  flex   items-center justify-center p-8">
-      <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={500} height={300}   />    
+      <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}     />    
 
 
   </CardContent> 

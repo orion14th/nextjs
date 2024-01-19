@@ -70,7 +70,7 @@ const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x10
                 <div className="p-1">
                   <Card>
                     <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-                        <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}    />    
+                        <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}      />    
                     </CardContent>
                   </Card>
                 </div>
