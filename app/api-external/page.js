@@ -47,7 +47,7 @@
   <div className="flex flex-wrap -mx-4 ">
 
  
-  <ApiExternalImage numberOfImages={5}  numbersToPreload={3} />
+  <ApiExternalImage numberOfImages={6}  numbersToPreload={3} />
 
   </div>
 </div>  

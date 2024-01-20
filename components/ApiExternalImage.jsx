@@ -29,8 +29,10 @@ import {
     const ImageSlider = (props) => {
 
 
- 
-      const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+      const numberOfImages = 5; // Default to 5 imag
+      const numbersToPreload = 3; // Default to 3 imag
+
+      const [emblaRef, emblaApi] = useEmblaCarousel();
 
 
 
@@ -46,8 +48,7 @@ import {
       // Fetch images using Next.js's fetch with revalidation
     
       const unsplashAccessKey = 'W4oBf7UVziIqyfjv9Qm6cLJH9Trzbec20B1DXUdfIDE'; // Replace with your Unsplash access key
-      const numberOfImages = props.numberOfImages; // Default to 5 imag
-      const numbersToPreload = props.numbersToPreload; // Default to 3 imag
+
 
  
        
@@ -78,8 +79,8 @@ console.log(`loading number ${isImagesLoading}`);
     
      
      const lastFetchTime = localStorage.getItem('lastFetchTime');
-      const shouldFetch = lastFetchTime === null || Date.now() - Number(lastFetchTime) >= 60 * 1000;
-    
+const shouldFetch = lastFetchTime === null || Date.now() - Number(lastFetchTime) >= 60 * 1000;
+        //   const shouldFetch =true;
     console.log(`shouldFetch ${shouldFetch}`);
     
       // Fetch images from API if not already in local storage
@@ -104,10 +105,11 @@ console.log(`loading number ${isImagesLoading}`);
 // Set Loading to 1 to fade after 1 second, and 2 to hide after 2 seconds
 const lastFetchTime = localStorage.getItem('lastFetchTime');
  
-
+console.log(images);
 console.log(`shouldFetchxxxx ${lastFetchTime}`);
  
-
+setTimeout(  ()=>{setIsLoading(1);}, 6000) ;  
+setTimeout(  ()=>{setIsLoading(2);}, 7000) ; 
 
           })
           .catch((error) => console.error('Error fetching images:', error));
@@ -176,7 +178,7 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
 
             <Card>
               <CardContent className="CardContentComponent flex aspect-square items-center justify-center p-6">
-                <span className="text-2xl font-semibold">   <Image  className="CarouselItemImg"   key={index}      src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority  />    </span>
+                <span className="text-2xl font-semibold">   <Image  className="CarouselItemImg"   key={index}      src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}    priority   />    </span>
               </CardContent>
             </Card>
 
@@ -187,7 +189,7 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
               
               <DialogDescription>  <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-4xl">
-              <Image  className="CarouselDialogItemImg"   key={index}      src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority  />  
+              <Image  className="CarouselDialogItemImg"   key={index}      src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority     />  
               </div>
     </div>   </DialogDescription>
             </DialogHeader>
@@ -200,7 +202,7 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
 
           <Card>
               <CardContent className="CardContentComponent flex aspect-square items-center justify-center p-6">
-                <span className="text-2xl font-semibold">   <Image  className="CarouselItemImg"   key={index}      src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority  />    </span>
+                <span className="text-2xl font-semibold">   <Image  className="CarouselItemImg"   key={index}      src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}     priority    />    </span>
               </CardContent>
             </Card>
 
