@@ -38,8 +38,8 @@ import React, { useState, useEffect } from 'react';
       // Fetch images using Next.js's fetch with revalidation
     
       const unsplashAccessKey = 'W4oBf7UVziIqyfjv9Qm6cLJH9Trzbec20B1DXUdfIDE'; // Replace with your Unsplash access key
-      const numberOfImages = props.numberOfImages || 5; // Default to 5 imag
-      const numbersToPreload = props.numbersToPreload || 3; // Default to 3 imag
+      const numberOfImages = props.numberOfImages; // Default to 5 imag
+      const numbersToPreload = props.numbersToPreload; // Default to 3 imag
 
  
        
@@ -97,7 +97,7 @@ console.log(`loading number ${isImagesLoading}`);
 const lastFetchTime = localStorage.getItem('lastFetchTime');
  
 
-console.log(`shouldFetchxxxx ${shouldFetch}`);
+console.log(`shouldFetchxxxx ${lastFetchTime}`);
  
 
 
@@ -131,7 +131,7 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
       <LoadingComponent loading={isLoading} />
      
       <div className="mainDivInner  row-span-3 md:row-span-1 w-full py-2"> 
-<h2 className="pageTitle">Unsplash Api</h2>           <p className="quoted">Client Side Rendering</p>
+<h2 className="pageTitle CarouselTitle">Unsplash Api</h2>           <p className="quoted">Client Side Rendering</p>
 </div>
         <div className="mainDivInner  row-span-3 md:row-span-1"> 
  

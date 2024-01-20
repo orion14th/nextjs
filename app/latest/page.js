@@ -30,7 +30,7 @@ const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/IMG_0300.j
 
 const myContentArray=['Fun With Words','AI + Art','Real-Time Drawing','Artwork','Real-Time Drawing','Website Revamp'];
 
-const myLinksArray=['https://www.youtube.com/embed/Eurwylh0EI0?si=7PIHKezz1FwnLeZg','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/embed/H3xQ5hfMD-w?si=XW65RFjCk8OtpyXM','./art','https://www.youtube.com/embed/SZjz8t_d_gc?si=-L__QO1gcP_UWaz','https://zacharyandsons.com/'];
+const myLinksArray=['https://www.youtube.com/embed/3C35wsHrabg?si=OB-EtG3iT9vRDxZC','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/embed/H3xQ5hfMD-w?si=XW65RFjCk8OtpyXM','./art','https://www.youtube.com/embed/SZjz8t_d_gc?si=-L__QO1gcP_UWaz','https://zacharyandsons.com/'];
 
 
   const { setTitle } = useContext(TitleContext);
