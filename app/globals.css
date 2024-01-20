@@ -646,15 +646,29 @@ body {
 @media (max-width:500px) {
  
 
-  .CarouselMixedSingleComponent,.CarouselLargeComponent {
+  .CarouselMixedSingleComponent {
     width: auto;
     max-width: 100%;
 }
 
-.CarouselMixedSingleComponent img,.CarouselLargeComponent img{
+.CarouselMixedSingleComponent img{
   width: 300px;
   height: auto;
 }
+
+
+.CarouselLargeComponent img {
+  width: auto;
+  height: auto;
+  max-height: 70vh;
+}
+
+.CarouselLargeComponent {
+  width: auto;
+  max-width: 50vh;
+  max-height: 70vh;
+}
+
   .youTubeCarousel{
     width:auto;
    height:20vh;

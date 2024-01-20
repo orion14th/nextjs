@@ -119,18 +119,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 
 
 
-
-
-
-  
-
-
-
-
-
-
-
-
+ 
     <main className="flex flex-col items-center justify-center h-screen gap-5">   
 <div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
 <h2 className="pageTitle  ">Latest</h2>
