@@ -18,7 +18,7 @@
      
 
     
-import { useContext,useEffect,useRef } from 'react';
+import { useContext,useEffect,useRef,useState } from 'react';
 import { TitleContext } from '@/components/TitleContext';
 
  
@@ -30,7 +30,54 @@ const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/IMG_0300.j
 
 const myContentArray=['Fun With Words','AI + Art','Real-Time Drawing','Artwork','Real-Time Drawing','Website Revamp'];
 
-const myLinksArray=['https://www.youtube.com/embed/3C35wsHrabg?si=OB-EtG3iT9vRDxZC','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/embed/H3xQ5hfMD-w?si=XW65RFjCk8OtpyXM','./art','https://www.youtube.com/embed/SZjz8t_d_gc?si=-L__QO1gcP_UWaz','https://zacharyandsons.com/'];
+const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/watch?v=H3xQ5hfMD-w','./art','https://www.youtube.com/watch?v=SZjz8t_d_gc','https://zacharyandsons.com/'];
+
+
+
+
+  // Function to extract YouTube ID from YouTube URL
+  const extractYouTubeIdFromUrl = (url) => {
+    const match = url.match(/(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i);
+    return match ? match[1] : null;
+  };
+
+  // Function to generate YouTube thumbnail URL from ID
+  const generateThumbnailUrl = (youtubeId) => {
+    return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+  };
+
+ 
+  // Modify URLs in myLinksArray to be YouTube thumbnail URLs
+  const newArray = myLinksArray.map((originalUrl) => {
+    const youtubeId = extractYouTubeIdFromUrl(originalUrl);
+    if (youtubeId) {
+      // Replace URL with YouTube thumbnail URL
+      return generateThumbnailUrl(youtubeId);
+    }
+    // Return unchanged URL for non-YouTube entries
+    return originalUrl;
+  });
+
+
+  const newArray2 = myLinksArray.map((originalUrl) => {
+    const youtubeId = extractYouTubeIdFromUrl(originalUrl);
+    if (youtubeId) {
+      // Replace URL with YouTube thumbnail URL
+      return youtubeId;
+    }
+    // Return unchanged URL for non-YouTube entries
+    return originalUrl;
+  });
+
+
+  // Display the modified array
+  console.log(newArray);
+  console.log(newArray2);
+
+
+
+
+
 
 
   const { setTitle } = useContext(TitleContext);
@@ -54,8 +101,35 @@ const myLinksArray=['https://www.youtube.com/embed/3C35wsHrabg?si=OB-EtG3iT9vRDx
  
 
 
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >=1500); // Adjust the breakpoint as needed
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call initially on component mount
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+ 
       
   return (
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 
     <main className="flex flex-col items-center justify-center h-screen gap-5">   
 <div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
@@ -67,13 +141,17 @@ const myLinksArray=['https://www.youtube.com/embed/3C35wsHrabg?si=OB-EtG3iT9vRDx
 
 
 
+ 
+    <Carousel className="CarouseComponent   animate__fadeIn "  plugins={isLargeScreen ? ( [
+        Autoplay({
+          delay: 7000,
+        }),
+      ]):([]) }    >
 
-    <Carousel className="CarouseComponent   animate__fadeIn "  plugins={[
-    Autoplay({
-      delay: 7000,
-    }),
-  ]}>
+      
       <CarouselContent className="CarouselMixedSingleComponent -ml-1">
+
+
         {myPictureArray.map((regularImageUrl, index) => (
           
           <CarouselItem key={index} className="CarouselItemComponent pl-1 sm:basis-1/1 md:basis-1/1 lg:basis-1/1">
@@ -83,38 +161,49 @@ const myLinksArray=['https://www.youtube.com/embed/3C35wsHrabg?si=OB-EtG3iT9vRDx
   
           { myLinksArray[index].indexOf('http') >-1 ? (
    
-<a class="removeStyles" href={myLinksArray[index]} target="_blank"  > 
 
+   <Card> 
 
 { myLinksArray[index].indexOf('youtube') >-1 ? (
 
+<CardContent className="CarouselMixedSingleComponent  flex   items-center justify-center p-8">
+  
+{isLargeScreen ? (
 
 
-
-
-        <Card> 
-                <CardContent className="CarouselMixedSingleComponent  flex   items-center justify-center p-8">
+       
+           
          
-                    <iframe class="youTubeCarousel" width="400" height="300" src={myLinksArray[index]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="youTubeCarousel" width="400" height="300" src={`https://www.youtube.com/embed/${newArray2[index]}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-                </CardContent> 
-              </Card>
+             
+          
+     ):(    
+      
+  
+ 
 
+      <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={newArray[index]} alt={`Image ${index + 1}`} width={1500} height={800}   loading="eager"    />     </a>
+ 
+    
+  )}  
+
+</CardContent> 
 
 ):(
-  <Card> 
+ 
   <CardContent className="CarouselMixedSingleComponent  flex   items-center justify-center p-8">
-      <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}   loading="eager"    />    
+  <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}   loading="eager"    />     </a>
 
 
   </CardContent> 
-</Card>
+
   )
   
   }
+</Card>
 
-
-              </a>
+              
 
     ) : (
       <Link key={index} href={myLinksArray[index]}>
