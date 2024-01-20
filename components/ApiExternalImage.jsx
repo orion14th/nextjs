@@ -131,7 +131,7 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
       <LoadingComponent loading={isLoading} />
      
       <div className="mainDivInner  row-span-3 md:row-span-1 w-full py-2"> 
-<h2 className="pageTitle">Unsplash Api</h2>
+<h2 className="pageTitle">Unsplash Api</h2>           <p className="quoted">Client Side Rendering</p>
 </div>
         <div className="mainDivInner  row-span-3 md:row-span-1"> 
  
@@ -150,7 +150,7 @@ setTimeout(  ()=>{setIsLoading(2);}, 3000) ;
                 <div className="p-1">
                   <Card>
                     <CardContent className="CardContentComponent flex aspect-square items-center justify-center p-6">
-                      <span className="text-2xl font-semibold">   <Image onLoad={handleImageLoad} className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority  />    </span>
+                      <span className="text-2xl font-semibold">   <Image onLoad={handleImageLoad} className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}    />    </span>
                     </CardContent>
                   </Card>
                 </div>

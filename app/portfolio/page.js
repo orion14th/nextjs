@@ -6,6 +6,7 @@
     import Image from 'next/image';  
     import Link from 'next/link'
  
+ 
     import { Card, CardContent } from "@/components/ui/card"
     import {
       Carousel,
@@ -60,6 +61,8 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
         <main className="flex flex-col items-center justify-center h-screen gap-5">   
  <div className="mainDivInner hideOnMobile row-span-3 md:row-span-1"> 
 <h2 className="pageTitle">My Work</h2>
+ 
+
 </div>
  
 

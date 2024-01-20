@@ -1,6 +1,7 @@
  
  import ApiExternalImageSSR from "@/components/ApiExternalImageSSR"
  
+
  async function getData() {
 
       // Fetch images using Next.js's fetch with revalidation
@@ -39,9 +40,7 @@ const imageList=data;
 
   const images = await getData()
  
-  console.log(33);
-   console.log(images);
-   console.log(4444);
+ 
       return (
 
 
@@ -53,6 +52,7 @@ const imageList=data;
       
         <div className="container mx-auto">
   <div className="flex flex-wrap -mx-4 ">
+  
 
  <ApiExternalImageSSR images={images}   />
  
