@@ -703,7 +703,10 @@ body {
 
 @media (max-width:500px) {
 
-
+  .pageTitle {
+    font-size: 2.5em;
+   
+}
   
 
   .quoted {
