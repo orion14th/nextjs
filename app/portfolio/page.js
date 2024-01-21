@@ -128,7 +128,7 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
 {isLargeScreen ? ( 
 
   <Card> 
-  <CardContent className="CarouselLargeComponent  flex   items-center justify-center p-8">
+  <CardContent className="  flex   items-center justify-center p-8">
       <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}   loading="eager"  />    
 
 

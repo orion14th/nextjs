@@ -405,6 +405,9 @@ h3.CarouselSubtitle {
   padding: 1em;
 }
 
+.CarouselContainer{
+  width:90%;
+}
 
 
  @media (max-width:2500) {
@@ -414,10 +417,12 @@ h3.CarouselSubtitle {
   }
 
 
-
  }
 
  @media (max-width:2000) {
+
+
+
   .CarouselLargeComponent{
    width:1200px;
    max-width:100%;
@@ -550,7 +555,9 @@ body {
 
 @media (max-width:1024px) {
 
-
+  .CarouselContainer{
+    width:100%;
+  }
   
   .CarouselMain button{
     display: none;
@@ -675,6 +682,8 @@ body {
 
   @media (max-width:700px) {
 
+
+    
     .CarouselMixedSingleComponent {
       width: 500px;
       max-width: 100%;
@@ -694,6 +703,9 @@ body {
 
 @media (max-width:500px) {
 
+
+  
+
   .quoted {
     text-align: center;
     font-size: 1.5em;
@@ -705,7 +717,7 @@ body {
     width: 100%;
     /* max-width: 100%; */
     height: auto;
-    padding: 0em;
+  
 }
 
 .CarouselMixedSingleComponent img {

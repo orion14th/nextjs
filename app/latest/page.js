@@ -144,7 +144,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 
 </div>
 
-<div className="container mx-auto">
+<div className="container CarouselContainer mx-auto">
 
 
 <div className="mainDivInner    row-span-3 md:row-span-1"> 
