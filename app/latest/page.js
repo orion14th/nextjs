@@ -14,6 +14,8 @@
       CarouselPrevious,
     } from "@/components/ui/carousel"
 
+
+    import LoadingComponent from '@/components/LoadingComponent';
     import Autoplay from "embla-carousel-autoplay"
      
 
@@ -100,16 +102,23 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
   }, []);
  
 
+  const [isLoading, setIsLoading] = useState(0);
 
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
+
+
+
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >=1500); // Adjust the breakpoint as needed
     };
 
     window.addEventListener('resize', handleResize);
     handleResize(); // Call initially on component mount
+
+    setTimeout(  ()=>{setIsLoading(1);}, 2000) ;  
+    setTimeout(  ()=>{setIsLoading(2);}, 3000) ; 
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -120,8 +129,11 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 
 
  
-    <main className="flex flex-col items-center justify-center h-screen gap-5">   
-<div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
+    <main className="flex flex-col items-center justify-center h-screen gap-5">  
+
+<LoadingComponent loading={isLoading} />
+
+<div className="mainDivInner hideOnMobile CarouselTitle  row-span-3 md:row-span-1"> 
 <h2 className="pageTitle  ">Latest</h2>
 
 </div>

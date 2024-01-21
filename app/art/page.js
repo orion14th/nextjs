@@ -5,6 +5,9 @@
  
     import Image from 'next/image';  
  
+    import LoadingComponent from '@/components/LoadingComponent';
+
+
     import { Card, CardContent } from "@/components/ui/card"
     import {
       Carousel,
@@ -18,7 +21,7 @@
      
 
     
-import { useContext,useEffect,useRef } from 'react';
+import { useContext,useEffect,useRef,useState } from 'react';
 import { TitleContext } from '@/components/TitleContext';
 
  
@@ -33,9 +36,12 @@ const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x10
   const isTitleUpdated = useRef(false); // Track title updates
   setTitle('Art');
 
+  const [isLoading, setIsLoading] = useState(0);
+
   useEffect(() => {
 
-
+    setTimeout(  ()=>{setIsLoading(1);}, 2000) ;  
+    setTimeout(  ()=>{setIsLoading(2);}, 3000) ; 
 
       if (!isTitleUpdated.current) {
           isTitleUpdated.current = true;
@@ -51,7 +57,10 @@ const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x10
       
       return (
 
-        <main className="flex flex-col items-center justify-center h-screen gap-5">   
+        <main className="flex flex-col items-center justify-center h-screen gap-5">  
+
+<LoadingComponent loading={isLoading} />
+
  <div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
 <h2 className="pageTitle  ">My Artwork</h2>
 </div>
@@ -63,7 +72,7 @@ const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x10
         Autoplay({
           delay: 7000,
         }),
-      ]}>
+      ]} >
           <CarouselContent className="CarouselPortComponent -ml-1">
             {myPictureArray.map((regularImageUrl, index) => (
               <CarouselItem key={index} className="CarouselItemComponent pl-1 sm:basis-1/1 md:basis-1/1 lg:basis-1/2">

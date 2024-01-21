@@ -6,7 +6,8 @@
     import Image from 'next/image';  
     import Link from 'next/link'
  
- 
+    import LoadingComponent from '@/components/LoadingComponent';
+
     import { Card, CardContent } from "@/components/ui/card"
     import {
       Carousel,
@@ -66,11 +67,22 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
       }
   }, []);
  
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [isLoading, setIsLoading] = useState(0);
+
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
+  const [isLargeScreenStart, setIsLargeScreenStart] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >=600); // Adjust the breakpoint as needed
+      if(window.innerWidth >=600){
+        setIsLargeScreen(true);    
+      }else if(window.innerWidth <600){
+        setIsLargeScreen(false);    
+      }
+     
+      setIsLargeScreenStart(true);
+      setTimeout(  ()=>{setIsLoading(1);}, 2000) ;  
+      setTimeout(  ()=>{setIsLoading(2);}, 3000) ; 
     };
 
     window.addEventListener('resize', handleResize);
@@ -84,6 +96,7 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
       return (
 
         <main className="flex flex-col items-center justify-center h-screen gap-5">   
+        <LoadingComponent loading={isLoading} />
  <div className="mainDivInner hideOnMobile row-span-3 md:row-span-1"> 
 <h2 className="pageTitle CarouselTitle">My Work</h2>
  
@@ -93,13 +106,13 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
 
         <div className="mainDivInner  row-span-3 md:row-span-1"> 
 
-      
-
-    <Carousel className="CarouseComponent   animate__fadeIn "  plugins={[
-    Autoplay({
-      delay: 7000,
-    }),
-  ]}>
+        {isLargeScreenStart ? (
+     
+    <Carousel className="CarouseComponent   animate__fadeIn "plugins={[
+      Autoplay({
+        delay: 7000,
+      }),
+    ]} >
       <CarouselContent className="CarouselLargeComponent -ml-1">
         {myPictureArray.map((regularImageUrl, index) => (
           
@@ -164,9 +177,9 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-
-
-        </div>
+        ):( <></>  ) }
+    
+        </div> 
         </main>
       )
     }
