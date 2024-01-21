@@ -692,6 +692,8 @@ body {
     max-width:100%;
    }
   
+ 
+
   }
   
 
@@ -714,7 +716,31 @@ body {
     max-height: 60vh;
     height: auto;
 }
+
+
+@media (max-height:700px) {
+ 
+   img.CarouselItemImg {
+ 
+    max-height:45vh;
+   
   }
+
+
+  .scrollOnMobile {
+    justify-content: flex-start;
+    height: 90vh;
+    margin-top: 6rem;
+    overflow-y: scroll;
+}
+
+  }
+  
+
+  }
+
+
+
 
 @media (max-width:500px) {
 
@@ -843,8 +869,17 @@ button {
  
 }
 
-@media screen and (max-height:700px) {
+@media (max-width:400px) {
+  .CarouselLargeComponent img {
+    width: auto;
+ 
+    max-height: 50vh;
+}
 
+}
+
+
+@media (max-height:700px) {
 
   .gapProfile1{
     gap:1.9em;
@@ -874,7 +909,13 @@ button {
   height: 70vh;
  
 }
-  
+ 
+.CarouselLargeComponent img {
+  width: auto !important;
+  height: 20vh;
+}
+
+
 }
 }
 
