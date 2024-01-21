@@ -65,7 +65,7 @@ const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x10
 <h2 className="pageTitle  ">My Artwork</h2>
 </div>
  
-
+<div className="container CarouselContainer mx-auto"> 
         <div className="mainDivInner  row-span-3 md:row-span-1"> 
 
         <Carousel className="CarouseComponent   animate__fadeIn "  plugins={[
@@ -89,7 +89,7 @@ const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x10
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-
+        </div>
         </div>
         </main>
       )

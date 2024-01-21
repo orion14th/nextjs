@@ -152,11 +152,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 
 
  
-    <Carousel className="CarouseComponent   animate__fadeIn "  plugins={isLargeScreen ? ( [
-        Autoplay({
-          delay: 7000,
-        }),
-      ]):([]) }    >
+    <Carousel className="CarouseComponent   animate__fadeIn "    >
 
       
       <CarouselContent className="CarouselMixedSingleComponentOuter -ml-1">
