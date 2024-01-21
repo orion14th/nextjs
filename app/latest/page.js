@@ -32,6 +32,8 @@ const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/IMG_0300.j
 
 const myContentArray=['Fun With Words','AI + Art','Real-Time Drawing','Artwork','Real-Time Drawing','Website Revamp'];
 
+const myDescriptionArray = ['Let your group use their phones to add words to the master screen, and see translations in various font styles, colors, animations and languages. As AI a question or sugar coat your negative thoughts in any language you would like.','I recently uploaded a photo of a fine art piece I created in a few AI tools that change the photo with various themes. Here is the output!','Let your group draw together to a master screen using their phones! In this example, a fullscreen photo of Santa Fe, New Mexico to draw within the skis of the land of enchantment.','Latest collection of the best artwork over the past years.','Let your group draw together to a master screen using their phones! Utilizing a black background, imagine a projection with the lights off as users draw from their phones, illuminating the projected area.','Latest portoflio website of Zachary and Sons Homes, luxury home builder. Improved design, hi-resultion images and video!'];
+
 const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/watch?v=H3xQ5hfMD-w','./art','https://www.youtube.com/watch?v=SZjz8t_d_gc','https://zacharyandsons.com/'];
 
 
@@ -238,9 +240,14 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
   }
 
                     
-  
+<div className="CarouselLowerDiv row-span-3 md:row-span-1"    > 
+    <p className="CarouselLowerP">{myDescriptionArray[index]}</p>
+    </div>
             </div>
           </CarouselItem>
+
+
+
         ))}
       </CarouselContent>
       <CarouselPrevious />
@@ -249,8 +256,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
         ):( <></>  ) }
     </div>
     
-
-    
+ 
     </div>
 
     </main>

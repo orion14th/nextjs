@@ -409,6 +409,21 @@ h3.CarouselSubtitle {
   width:90%;
 }
 
+.CarouselLowerP{
+  margin-top:1em;
+    padding:1.5em;
+  line-height: 1.9em;
+  text-align: center;
+ 
+ 
+}
+
+.CarouselLowerDiv{
+
+  background-color: #f8f8f8;
+border-radius: 10px;
+
+}
 
  @media (max-width:2500) {
   .CarouselLargeComponent{
