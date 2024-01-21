@@ -28,7 +28,7 @@ import { TitleContext } from '@/components/TitleContext';
 
 export default function Home() {
 
-const myPictureArray = ['/images/portfolio/JPEG/beingyou.jpg','/images/portfolio/JPEG/freightway.jpg','/images/portfolio/JPEG/freightway-2.jpg','/images/portfolio/JPEG/Z&S.jpg','/images/portfolio/JPEG/casalogy.jpg','/images/portfolio/JPEG/Netwaiter.jpg','/images/portfolio/JPEG/grander.jpg','/images/portfolio/JPEG/AITR.jpg','/images/portfolio/JPEG/AITR-2.jpg','/images/portfolio/JPEG/PhotoStudio.jpg','/images/portfolio/JPEG/SS.jpg','/images/portfolio/JPEG/wellpeople.jpg'];
+const myPictureArray = ['/images/portfolio/JPEG/beingyou.jpg','/images/portfolio/JPEG/Z&S.jpg','/images/portfolio/JPEG/Netwaiter.jpg','/images/portfolio/JPEG/AITR.jpg','/images/portfolio/JPEG/AITR-2.jpg','/images/portfolio/JPEG/PhotoStudio.jpg','/images/portfolio/JPEG/SS.jpg','/images/portfolio/JPEG/freightway.jpg','/images/portfolio/JPEG/freightway-2.jpg','/images/portfolio/JPEG/wellpeople.jpg','/images/portfolio/JPEG/casalogy.jpg','/images/portfolio/JPEG/grander.jpg'];
 
 
 function replaceImagePaths(originalArray) {
@@ -43,10 +43,10 @@ const myPictureMobileArray = replaceImagePaths(myPictureArray);
 
 
 
-const myContentArray=['Being You App','Freightway','Freightway','Zachary and Sons Homes','Casalogy','Netwaiter','Grander Foods','Art in the Raw','Art in the Raw','The Photography Studio','Symphonic Soul','Well People'];
+const myContentArray=['Being You App','Zachary and Sons Homes','Netwaiter','Art in the Raw','Art in the Raw','The Photography Studio','Symphonic Soul','Freightway','Freightway','Well People','Casalogy','Grander Foods'];
 
 
-const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https://freightway.co/','https://zacharyandsons.com/','https://casalogy.com/','https://netwaiter.net/','https://granderfoods.com/','https://artintheraw.net/','https://artintheraw.net/','https://thephotostudio.com/','https://symphonicsoul.net/','https://wellpeople.com'];
+const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','https://netwaiter.net/','https://artintheraw.net/','https://artintheraw.net/','https://thephotostudio.com/','https://symphonicsoul.net/','https://freightway.co/','https://freightway.co/','https://wellpeople.com','https://casalogy.com/','https://granderfoods.com/'];
 
   const { setTitle } = useContext(TitleContext);
 
