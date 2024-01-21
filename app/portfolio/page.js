@@ -108,11 +108,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
 
         {isLargeScreenStart ? (
      
-    <Carousel className="CarouseComponent   animate__fadeIn "plugins={[
-      Autoplay({
-        delay: 7000,
-      }),
-    ]} >
+    <Carousel className="CarouseComponent   animate__fadeIn "  >
       <CarouselContent className="CarouselLargeComponent -ml-1">
         {myPictureArray.map((regularImageUrl, index) => (
           
