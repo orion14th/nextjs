@@ -74,9 +74,9 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
 
   useEffect(() => {
     const handleResize = () => {
-      if(window.innerWidth >=600){
+      if(window.innerWidth >=700){
         setIsLargeScreen(true);    
-      }else if(window.innerWidth <600){
+      }else if(window.innerWidth <700){
         setIsLargeScreen(false);    
       }
      
@@ -95,7 +95,7 @@ const myLinksArray=['https://beingyouapp.com/','https://freightway.co/','https:/
       
       return (
 
-        <main className="flex flex-col items-center justify-center h-screen gap-5">   
+        <main className="CarouselMain flex flex-col items-center justify-center h-screen gap-5">   
         <LoadingComponent loading={isLoading} />
  <div className="mainDivInner hideOnMobile row-span-3 md:row-span-1"> 
 <h2 className="pageTitle CarouselTitle">My Work</h2>

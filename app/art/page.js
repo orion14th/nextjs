@@ -57,7 +57,7 @@ const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x10
       
       return (
 
-        <main className="flex flex-col items-center justify-center h-screen gap-5">  
+        <main className="CarouselMain flex flex-col items-center justify-center h-screen gap-5">  
 
 <LoadingComponent loading={isLoading} />
 

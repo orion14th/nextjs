@@ -104,14 +104,18 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 
   const [isLoading, setIsLoading] = useState(0);
 
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
 
   useEffect(() => {
 
 
 
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >=1500); // Adjust the breakpoint as needed
+      if(window.innerWidth >=700){
+      setIsLargeScreen(true); // Adjust the breakpoint as needed
+      }else if(window.innerWidth <700){
+        setIsLargeScreen(false); // Adjust the breakpoint as needed
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -126,17 +130,22 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
       
   return (
 
-
+    
 
  
-    <main className="flex flex-col items-center justify-center h-screen gap-5">  
+    <main className="CarouselMain   scrollOnMobile flex flex-col items-center justify-center h-screen gap-5">  
 
 <LoadingComponent loading={isLoading} />
 
-<div className="mainDivInner hideOnMobile CarouselTitle  row-span-3 md:row-span-1"> 
-<h2 className="pageTitle  ">Latest</h2>
+<div className="flex flex-wrap -mx-4 ">
+
+
+<h2 className="pageTitle  hideOnMobile">Latest</h2>
 
 </div>
+
+<div className="container mx-auto">
+
 
 <div className="mainDivInner    row-span-3 md:row-span-1"> 
 
@@ -150,7 +159,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
       ]):([]) }    >
 
       
-      <CarouselContent className="CarouselMixedSingleComponent -ml-1">
+      <CarouselContent className="CarouselMixedSingleComponentOuter -ml-1">
 
 
         {myPictureArray.map((regularImageUrl, index) => (
@@ -233,7 +242,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
       <CarouselNext />
     </Carousel>
 
-    </div>
+    </div></div>
     </main>
   )
     }
