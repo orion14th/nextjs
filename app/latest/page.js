@@ -105,6 +105,9 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
   const [isLoading, setIsLoading] = useState(0);
 
   const [isLargeScreen, setIsLargeScreen] = useState(true);
+  const [isLargeScreenStart, setIsLargeScreenStart] = useState(false);
+
+  
 
   useEffect(() => {
 
@@ -120,9 +123,11 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 
     window.addEventListener('resize', handleResize);
     handleResize(); // Call initially on component mount
-
+    setIsLargeScreenStart(true);
     setTimeout(  ()=>{setIsLoading(1);}, 2000) ;  
     setTimeout(  ()=>{setIsLoading(2);}, 3000) ; 
+
+  
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -136,7 +141,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
     <main className="CarouselMain   scrollOnMobile flex flex-col items-center justify-center h-screen gap-5">  
 
 <LoadingComponent loading={isLoading} />
-
+ 
 <div className="flex flex-wrap -mx-4 ">
 
 
@@ -150,9 +155,13 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 <div className="mainDivInner    row-span-3 md:row-span-1"> 
 
 
-
+{isLargeScreenStart ? (
  
-    <Carousel className="CarouseComponent   animate__fadeIn "    >
+    <Carousel className="CarouseComponent   animate__fadeIn "  plugins={!isLargeScreen ? ( [
+        Autoplay({
+          delay: 7000,
+        }),
+      ]):([]) }    >
 
       
       <CarouselContent className="CarouselMixedSingleComponentOuter -ml-1">
@@ -237,8 +246,13 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
+        ):( <></>  ) }
+    </div>
+    
 
-    </div></div>
+    
+    </div>
+
     </main>
   )
     }
