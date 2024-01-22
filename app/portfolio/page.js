@@ -102,14 +102,14 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
  
 
 </div>
- 
+<div className="container CarouselContainer mx-auto">
 
         <div className="mainDivInner  row-span-3 md:row-span-1"> 
 
         {isLargeScreenStart ? (
      
     <Carousel className="CarouseComponent   animate__fadeIn "  >
-      <CarouselContent className="CarouselLargeComponent -ml-1">
+      <CarouselContent className="CarouselLargeComponentOuter -ml-1">
         {myPictureArray.map((regularImageUrl, index) => (
           
           <CarouselItem key={index} className="CarouselItemComponent pl-1 sm:basis-1/1 md:basis-1/1 lg:basis-1/1">
@@ -124,7 +124,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
 {isLargeScreen ? ( 
 
   <Card> 
-  <CardContent className="  flex   items-center justify-center p-8">
+  <CardContent className="CarouselItemComponent  flex   items-center justify-center p-8">
       <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}   loading="eager"  />    
 
 
@@ -174,7 +174,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
       <CarouselNext />
     </Carousel>
         ):( <></>  ) }
-    
+      </div> 
         </div> 
         </main>
       )
