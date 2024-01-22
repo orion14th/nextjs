@@ -58,7 +58,8 @@ Glad You Made It.</p>
       <div className="container mx-auto  text-center"> <Link href="./react"> <Button  variant="custom" className="min-w-44 bg-black text-white">React JS</Button>
       </Link></div>
    
-
+      <div className="container mx-auto  text-center"> <Link href="https://symphonicsoul.net"> <Button  variant="custom" className="min-w-44 bg-black text-white">Services</Button>
+      </Link></div>
 
 
 
