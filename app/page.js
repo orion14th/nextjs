@@ -44,8 +44,8 @@ export default function Home() {
 
    <div className="mainDivInner w-full"> 
 
-   <p className="quoted">Welcome!<br />
-<span className="smallHeight">Glad You Made It.</span></p>
+   <p className="quoted"><span className="smallHeight">Welcome!<br /></span>
+Made With React JS</p>
   </div>
 
  
