@@ -224,12 +224,13 @@ img.CarouselItemImg {
 }
 
 
-.menu-mobile{
- position:fixed;
- z-index: 999;
+ 
+
+.menu-mobile {
+  position: fixed;
+  z-index: 999;
+  padding: 1.25rem;
 }
-
-
 
 
  /* FOOTER */
