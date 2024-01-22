@@ -4,7 +4,7 @@
 
  async function getData() {
 
-  const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x1024@2x copy.jpg','/images/art/apprentice.jpg','/images/art/artisticintegrity.jpg','/images/art/carosel.jpg','/images/art/Colorful Dreams 1.jpg','/images/art/cycles.jpg','/images/art/Deepthought.png','/images/art/Manwithamusicalsoul.png','/images/art/pic0k.jpg','/images/art/Moviefiend.png','/images/art/warready.jpg','/images/art/pic27.jpg','/images/art/red.jpg','/images/art/raw.jpg','/images/art/pic6.jpg','/images/art/Queenpuffysnow.jpg','/images/art/Elanor_shynosisinGminor.png'];
+  const myPictureArray = ['/images/art/JPEG/passion.jpg','/images/art/JPEG/nightmare.jpg','/images/art/JPEG/apprentice.jpg','/images/art/JPEG/artisticintegrity.jpg','/images/art/JPEG/carosel.jpg','/images/art/JPEG/Colorful Dreams 1.jpg','/images/art/JPEG/cycles.jpg','/images/art/JPEG/Deepthought.jpg','/images/art/JPEG/Manwithamusicalsoul.jpg','/images/art/JPEG/pic0k.jpg','/images/art/JPEG/Moviefiend.png','/images/art/JPEG/warready.jpg','/images/art/JPEG/pic27.jpg','/images/art/JPEG/red.jpg','/images/art/JPEG/raw.jpg','/images/art/JPEG/pic6.jpg','/images/art/JPEG/Queenpuffysnow.jpg','/images/art/JPEG/Elanor_shynosisinGminor.jpg'];
 
 
 
@@ -44,8 +44,8 @@ const myTitle='Art';
 
   const myContentArray=['Tyranny of Passion','Nightmare','Apprentice','Artistic Integrity','Love Carosuel','Colorful Dreams','Cycles in Psychology','Deep Thought','Man With the Musical Soul','Dancing in the Rain','Movie Fiend','War Ready','Untitled','Night of the Red Vase','Raw Power','The Cellist','The Queen of Puffy Snow', 'Elanors Hynosis in G Minor'];
   
-  const myLinksArray='';
-//  const myLinksArray=['#','#','#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
+ 
+  const myLinksArray=['https://shop.symphonicsoul.net/','https://shop.symphonicsoul.net/','https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/', 'https://shop.symphonicsoul.net/'];
   
 
 

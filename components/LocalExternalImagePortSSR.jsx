@@ -107,7 +107,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 <Card> 
 <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-<Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`}  width={1500} height={1500}   priority  />    
+<Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}  priority  />    
 
 
 </CardContent> 
@@ -118,7 +118,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 <Card> 
 <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-<Image className="CarouselItemImg" src={myPictureMobileArray[index]} alt={`Image ${index + 1}`} width={1500} height={1500}  priority  />    
+<Image className="CarouselItemImg" src={myPictureMobileArray[index]} alt={`Image ${index + 1}`} width={1024} height={600}  priority  />    
 
 
 </CardContent> 
@@ -134,7 +134,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 <Card> 
         <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-            <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={1500} priority  />    
+            <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority  />    
 
 
         </CardContent> 
@@ -152,7 +152,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
   <Card> 
         <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-            <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={1500} priority  />    
+            <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300} priority  />    
 
 
         </CardContent> 

@@ -1,5 +1,5 @@
  
- import LocalExternalImageSSR from "@/components/LocalExternalImageSSR"
+ import LocalExternalImageSSR from "@/components/LocalExternalImagePortSSR"
  
 
  async function getData() {
