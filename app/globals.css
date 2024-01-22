@@ -767,7 +767,7 @@ body {
 .CarouselLargeComponentOuter .CarouselSubtitle{
   font-size: 1em;
 }
-
+ 
 
   .quoted {
     text-align: center;
@@ -811,6 +811,7 @@ body {
   /* height: 100vh; */
   width: auto;
   /* max-width: 100% !important; */
+  max-height: 50vh;
 }
 
 .youTubeCarousel{
