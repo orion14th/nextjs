@@ -142,14 +142,17 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
  
     <main className="CarouselMain   scrollOnMobile flex flex-col items-center justify-center h-screen gap-5">  
 
+ 
+
 <LoadingComponent loading={isLoading} />
  
-<div className="flex flex-wrap -mx-4 ">
+{isLargeScreen ? (
 
+<div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
+        <h2 className="pageTitle  ">Latest</h2>
+        </div>
 
-<h2 className="pageTitle  hideOnMobile">Latest</h2>
-
-</div>
+):( <></>   )  }
 
 <div className="container CarouselContainer mx-auto">
 
