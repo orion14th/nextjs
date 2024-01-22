@@ -4,7 +4,7 @@
 
  async function getData() {
 
-  const myPictureArray = ['/images/art/JPEG/passion.jpg','/images/art/JPEG/nightmare.jpg','/images/art/JPEG/apprentice.jpg','/images/art/JPEG/artisticintegrity.jpg','/images/art/JPEG/carosel.jpg','/images/art/JPEG/Colorful Dreams 1.jpg','/images/art/JPEG/cycles.jpg','/images/art/JPEG/Deepthought.jpg','/images/art/JPEG/Manwithamusicalsoul.jpg','/images/art/JPEG/pic0k.jpg','/images/art/JPEG/Moviefiend.png','/images/art/JPEG/warready.jpg','/images/art/JPEG/pic27.jpg','/images/art/JPEG/red.jpg','/images/art/JPEG/raw.jpg','/images/art/JPEG/pic6.jpg','/images/art/JPEG/Queenpuffysnow.jpg','/images/art/JPEG/Elanor_shynosisinGminor.jpg'];
+  const myPictureArray = ['/images/art/JPEG/passion.jpg','/images/art/JPEG/nightmare.jpg','/images/art/JPEG/apprentice.jpg','/images/art/JPEG/artisticintegrity.jpg','/images/art/JPEG/carosel.jpg','/images/art/JPEG/Colorful Dreams 1.jpg','/images/art/JPEG/cycles.jpg','/images/art/JPEG/Deepthought.jpg','/images/art/JPEG/Manwithamusicalsoul.jpg','/images/art/JPEG/pic0k.jpg','/images/art/JPEG/Moviefiend.jpg','/images/art/JPEG/warready.jpg','/images/art/JPEG/pic27.jpg','/images/art/JPEG/red.jpg','/images/art/JPEG/raw.jpg','/images/art/JPEG/pic6.jpg','/images/art/JPEG/Queenpuffysnow.jpg','/images/art/JPEG/Elanor_shynosisinGminor.jpg'];
 
 
 

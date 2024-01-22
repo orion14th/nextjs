@@ -27,7 +27,7 @@ import { TitleContext } from '@/components/TitleContext';
 
 export default function Home() {
 
-const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/IMG_0300.jpg','','/images/portfolio/JPEG/Z&S.jpg'];
+const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/JPEG/IMG_0300.jpg','','/images/portfolio/JPEG/Z&S.jpg'];
 //const myContentArray=['Artwork','Real-Time Drawing','Real-Time Drawing','Fun With Words','AI + Education','Rough Drafts','Content Creation','New Photos','Upcoming Shows','Collaborations','test2','test2','test2','test2','test2','test2','test2','test2','test2','test9'];
 
 const myContentArray=['Fun With Words','AI + Art','Real-Time Drawing','Artwork','Real-Time Drawing','Website Revamp'];

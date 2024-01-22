@@ -671,10 +671,10 @@ body {
  
     
   }
-  .youTubeCarousel{
-    width:700px;
-   height:50vh;
-  }
+  .youTubeCarousel {
+    width: 700px;
+    height: 40vh;
+}
   
 
   .CarouselPortComponent {
