@@ -27,14 +27,14 @@ import { TitleContext } from '@/components/TitleContext';
 
 export default function Home() {
 
-const myPictureArray = ['','/images/art/ai-cat-3.jpg','','/images/art/JPEG/IMG_0300.jpg','','/images/portfolio/JPEG/Z&S.jpg'];
+const myPictureArray = ['/images/art/JPEG/IMG_0300.jpg','','/images/art/ai-cat-3.jpg','','','/images/portfolio/JPEG/Z&S.jpg'];
 //const myContentArray=['Artwork','Real-Time Drawing','Real-Time Drawing','Fun With Words','AI + Education','Rough Drafts','Content Creation','New Photos','Upcoming Shows','Collaborations','test2','test2','test2','test2','test2','test2','test2','test2','test2','test9'];
 
-const myContentArray=['Fun With Words','AI + Art','Real-Time Drawing','Artwork','Real-Time Drawing','Website Revamp'];
+const myContentArray=['Artwork','Fun With Words','AI + Art','Real-Time Drawing','Real-Time Drawing','Website Revamp'];
 
-const myDescriptionArray = ['Let your group use their phones to add words to the master screen, and see translations in various font styles, colors, animations and languages. As AI a question or sugar coat your negative thoughts in any language you would like.','I recently uploaded a photo of a fine art piece I created in a few AI tools that change the photo with various themes. Here is the output!','Let your group draw together to a master screen using their phones! In this example, a fullscreen photo of Santa Fe, New Mexico to draw within the skis of the land of enchantment.','Latest collection of the best artwork over the past years.','Let your group draw together to a master screen using their phones! Utilizing a black background, imagine a projection with the lights off as users draw from their phones, illuminating the projected area.','Latest portoflio website of Zachary and Sons Homes, luxury home builder. Improved design, hi-resultion images and video!'];
+const myDescriptionArray = ['I recently uploaded a photo of a fine art piece I created in a few AI tools that change the photo with various themes. Here is the output!','Let your group use their phones to add words to the master screen, and see translations in various font styles, colors, animations and languages. As AI a question or sugar coat your negative thoughts in any language you would like.','Let your group draw together to a master screen using their phones! In this example, a fullscreen photo of Santa Fe, New Mexico to draw within the skis of the land of enchantment.','Latest collection of the best artwork over the past years.','Let your group draw together to a master screen using their phones! Utilizing a black background, imagine a projection with the lights off as users draw from their phones, illuminating the projected area.','Latest portoflio website of Zachary and Sons Homes, luxury home builder. Improved design, hi-resultion images and video!'];
 
-const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/watch?v=H3xQ5hfMD-w','./art','https://www.youtube.com/watch?v=SZjz8t_d_gc','https://zacharyandsons.com/'];
+const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https://www.instagram.com/reel/C2QVZXtPNxH/','https://www.youtube.com/watch?v=H3xQ5hfMD-w','https://www.youtube.com/watch?v=SZjz8t_d_gc','https://zacharyandsons.com/'];
 
 
 
@@ -203,7 +203,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
   
  
 
-      <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={newArray[index]} alt={`Image ${index + 1}`} width={1500} height={800}   loading="eager"    />     </a>
+      <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={newArray[index]} alt={`Image ${index + 1}`} width={1500} height={800}   priority   />     </a>
  
     
   )}  
@@ -213,7 +213,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 ):(
  
   <CardContent className="CarouselMixedSingleComponent  flex   items-center justify-center p-8">
-  <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}   loading="eager"    />     </a>
+  <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={800}   priority   />     </a>
 
 
   </CardContent> 
@@ -230,7 +230,7 @@ const myLinksArray=['https://www.youtube.com/watch?v=3C35wsHrabg','https://www.i
 
 <Card> 
                 <CardContent className="CarouselMixedSingleComponent  flex   items-center justify-center p-8">
-                    <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}   />    
+                    <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}  priority />    
 
 
                 </CardContent> 
