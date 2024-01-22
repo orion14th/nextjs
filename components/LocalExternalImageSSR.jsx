@@ -77,7 +77,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 <LoadingComponent loading={isLoading} />
 <div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
-        <h2 className="pageTitle  ">My Artwork</h2>
+        <h2 className="pageTitle  ">{myTitle}</h2>
         </div>
          
         <div className="container CarouselContainer mx-auto"> 

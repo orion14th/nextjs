@@ -38,6 +38,8 @@ const myTitle='Portfolio';
   
   const myPictureMobileArray = replaceImagePaths(images);
    
+
+  
   const myContentArray=['Being You App','Zachary and Sons Homes','Netwaiter','Art in the Raw','Art in the Raw','The Photography Studio','Symphonic Soul','Freightway','Freightway','Well People','Casalogy','Grander Foods'];
   
   

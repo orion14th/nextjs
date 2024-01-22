@@ -400,6 +400,8 @@ h3.CarouselSubtitle {
 
 }
 
+
+
 .menu-footer h2 {
  
   padding: 1em;
@@ -423,6 +425,11 @@ h3.CarouselSubtitle {
   background-color: #f8f8f8;
 border-radius: 10px;
 
+}
+
+.CarouselPortComponentOuter img {
+  max-height: 60vh;
+  width: auto;
 }
 
  @media (max-width:2500) {
@@ -659,13 +666,11 @@ body {
   }
   
 
-  .CarouselPortComponent{
-    width:600px;
-    max-width:100%;
-    max-height:100vh;
-  
-  }
-  
+  .CarouselPortComponent {
+    width: auto;
+    max-width: 100%;
+    max-height: 100vh;
+}
   
   .menu-footer {
     width: 40%;
