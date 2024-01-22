@@ -45,7 +45,7 @@ export default function Home() {
    <div className="mainDivInner w-full"> 
 
    <p className="quoted">Welcome!<br />
-Glad You Made It.</p>
+<span className="smallHeight">Glad You Made It.</span></p>
   </div>
 
  
