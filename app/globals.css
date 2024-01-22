@@ -910,8 +910,8 @@ button {
 }
  
 .CarouselLargeComponent img {
-  width: auto !important;
-  height: 20vh;
+  width: auto!important;
+  height: 50vh;
 }
 
 
