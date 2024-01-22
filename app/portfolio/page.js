@@ -95,6 +95,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
       
       return (
 
+        
         <main className="CarouselMain flex flex-col items-center justify-center h-screen gap-5">   
         <LoadingComponent loading={isLoading} />
         
@@ -110,7 +111,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
         {isLargeScreenStart ? (
      
     <Carousel className="CarouseComponent   animate__fadeIn "  >
-      <CarouselContent className="CarouselLargeComponentOuter -ml-1">
+      <CarouselContent className="CarouselPortComponentOuter -ml-1">
         {myPictureArray.map((regularImageUrl, index) => (
           
           <CarouselItem key={index} className="CarouselItemComponent pl-1 sm:basis-1/1 md:basis-1/1 lg:basis-1/1">
@@ -136,7 +137,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
 ):(
 
   <Card> 
-  <CardContent className="  CarouselLargeComponent  flex   items-center justify-center p-8">
+  <CardContent className="  CarouselPortComponent  flex   items-center justify-center p-8">
       <Image className="CarouselItemImg" src={myPictureMobileArray[index]} alt={`Image ${index + 1}`} width={1024} height={600}   loading="eager"  />    
 
 
@@ -152,7 +153,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
       <Link key={index} href={myLinksArray[index]}>
 
 <Card> 
-                <CardContent className="CarouselLargeComponent  flex   items-center justify-center p-8">
+                <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
                     <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}   />    
 
 
