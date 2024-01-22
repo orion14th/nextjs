@@ -97,14 +97,15 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
 
         <main className="CarouselMain flex flex-col items-center justify-center h-screen gap-5">   
         <LoadingComponent loading={isLoading} />
- <div className="mainDivInner hideOnMobile row-span-3 md:row-span-1"> 
-<h2 className="pageTitle CarouselTitle">My Work</h2>
+        
  
-
+ <div className="flex flex-wrap -mx-4 "> 
+<h2 className="pageTitle CarouselTitle">My Work</h2>
 </div>
+
 <div className="container CarouselContainer mx-auto">
 
-        <div className="mainDivInner  row-span-3 md:row-span-1"> 
+<div className="mainDivInner    row-span-3 md:row-span-1"> 
 
         {isLargeScreenStart ? (
      
