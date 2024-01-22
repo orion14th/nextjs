@@ -136,7 +136,7 @@ const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','ht
 ):(
 
   <Card> 
-  <CardContent className="CarouselMobileLargeComponent CarouselLargeComponent  flex   items-center justify-center p-8">
+  <CardContent className="  CarouselLargeComponent  flex   items-center justify-center p-8">
       <Image className="CarouselItemImg" src={myPictureMobileArray[index]} alt={`Image ${index + 1}`} width={1024} height={600}   loading="eager"  />    
 
 
