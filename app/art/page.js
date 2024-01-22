@@ -4,10 +4,11 @@
 
  async function getData() {
 
-  const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x1024@2x copy.jpg','/images/art/apprentice.jpg','/images/art/artisticintegrity.jpg'];
+  const myPictureArray = ['/images/art/passion.jpg','/images/art/nightmare_1024x1024@2x copy.jpg','/images/art/apprentice.jpg','/images/art/artisticintegrity.jpg','/images/art/carosel.jpg','/images/art/Colorful Dreams 1.jpg','/images/art/cycles.jpg','/images/art/Deepthought.png','/images/art/Manwithamusicalsoul.png','/images/art/pic0k.jpg','/images/art/Moviefiend.png','/images/art/warready.jpg','/images/art/pic27.jpg','/images/art/red.jpg','/images/art/raw.jpg','/images/art/pic6.jpg','/images/art/Queenpuffysnow.jpg','/images/art/Elanor_shynosisinGminor.png'];
 
 
- 
+
+  
  
 const imageList=myPictureArray;
  
@@ -41,10 +42,10 @@ const myTitle='Art';
    
   const myPictureMobileArray = images;
 
-  const myContentArray=['Being You App','Zachary and Sons Homes','Netwaiter','Art in the Raw','Art in the Raw'];
+  const myContentArray=['Tyranny of Passion','Nightmare','Apprentice','Artistic Integrity','Love Carosuel','Colorful Dreams','Cycles in Psychology','Deep Thought','Man With the Musical Soul','Dancing in the Rain','Movie Fiend','War Ready','Untitled','Night of the Red Vase','Raw Power','The Cellist','The Queen of Puffy Snow', 'Elanors Hynosis in G Minor'];
   
-  
-  const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','https://netwaiter.net/','https://artintheraw.net/','https://artintheraw.net/'];
+  const myLinksArray='';
+//  const myLinksArray=['#','#','#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'];
   
 
 

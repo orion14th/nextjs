@@ -96,8 +96,8 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
   <CarouselItem key={index} className="CarouselItemComponent pl-1 sm:basis-1/1 md:basis-1/1 lg:basis-1/1">
     <div className="p-1">
     <div className="mainDivInner  row-span-3 md:row-span-1"> <h3 className="CarouselSubtitle">{myContentArray[index]}</h3>  </div>
-
-
+    { myLinksArray.length > 1 ? (
+<>
   { myLinksArray[index].indexOf('http') >-1 ? (
 
 <a class="removeStyles" href={myLinksArray[index]} target="_blank"  > 
@@ -144,8 +144,21 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 )
 
 }
+</>
+) : (         
 
-            
+
+
+  <Card> 
+        <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
+            <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={400} height={300}   />    
+
+
+        </CardContent> 
+      </Card>
+
+
+)   }
 
     </div>
   </CarouselItem>
