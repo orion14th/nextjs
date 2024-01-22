@@ -43,9 +43,15 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
       if(window.innerWidth >=700){
         setIsLargeScreen(true);    
       }else if(window.innerWidth <700){
+        if(window.innerHeight<950){
         setIsLargeScreen(false);    
+      }else if(window.innerHeight>950){
+        setIsLargeScreen(true);    
       }
-     
+    }
+
+  
+    
       setIsLargeScreenStart(true);
       setTimeout(  ()=>{setIsLoading(1);}, 2000) ;  
       setTimeout(  ()=>{setIsLoading(2);}, 3000) ; 
@@ -59,17 +65,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
  
 
 
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >=1500); // Adjust the breakpoint as needed
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Call initially on component mount
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+ 
 
     return (
       <>
@@ -77,7 +73,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 <LoadingComponent loading={isLoading} />
  
-{isLargeScreenStart ? (
+{isLargeScreen ? (
 
 <div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
         <h2 className="pageTitle  ">{myTitle}</h2>
