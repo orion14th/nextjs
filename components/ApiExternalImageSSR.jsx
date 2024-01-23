@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-
+import LoadingComponent from '@/components/LoadingComponent';
 import {
   Dialog,
   DialogContent,
@@ -22,10 +22,14 @@ import {
 
 const ImageSlider = ({ images }) => {
 
-
+  const [isLoading, setIsLoading] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
+
+    setTimeout(  ()=>{setIsLoading(1);}, 2000) ;  
+    setTimeout(  ()=>{setIsLoading(2);}, 3000) ; 
+
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >=1500); // Adjust the breakpoint as needed
     };
@@ -38,7 +42,7 @@ const ImageSlider = ({ images }) => {
 
     return (
       <>
-
+<LoadingComponent loading={isLoading} />
 <div className="mainDivInner  row-span-3 md:row-span-1 w-full py-2"> 
 <h2 className="pageTitle CarouselTitle">Unsplash Api</h2>
 <p className="quoted">Server Side Rendering</p>
