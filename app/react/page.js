@@ -47,7 +47,7 @@ export default function Home() {
 
    <div className="mainDivInner w-full"> 
 
-   <p className="quoted"><a href="https://nextjs.org/" target="_blank">Next.JS</a> +&nbsp;  
+   <p className="quoted"><a href="https://nextjs.org/" target="_blank">Next.JS</a> + <br />  
    <a href="https://ui.shadcn.com/" target="_blank">ShadCN UI</a></p>
   </div>
 
@@ -67,6 +67,9 @@ export default function Home() {
      
 
 
+      <div className="container mx-auto text-center"> <Link href="./more"> <Button   variant="outline" >Ask a Question</Button>   </Link> </div>
+    
+  
 
 
     
