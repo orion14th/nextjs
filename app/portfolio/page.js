@@ -51,9 +51,9 @@ const myTitle='Portfolio';
 
 
    
-        <main className="CarouselMain flex flex-col items-center justify-center h-screen gap-5">  
+         
 
- 
+<main className="scrollOnMobile CarouselMain flex flex-col items-center justify-center h-screen gap-5"> 
         
   
 
