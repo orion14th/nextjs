@@ -35,13 +35,13 @@ export default function Home() {
   return (
  
    
- 
+    
 
-    <main className="scrollOnMobile flex flex-col items-center justify-center h-screen gap-10">   
+    <main className="  flex flex-col items-center justify-center h-screen gap-10">   
 
 <div className="mainDivInner w-full"> 
-<h3 class="medHeight">React</h3>
-<h2 className="pageTitle">Playground</h2>  
+<h3 class=" ">React</h3>
+<h2 className="pageTitle medHeight">Playground</h2>  
 
 </div>
 
@@ -68,7 +68,7 @@ export default function Home() {
 
 
     
-</main>
+</main>    
 
      
 

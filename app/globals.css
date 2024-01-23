@@ -844,9 +844,10 @@ display: none;
 
 
   .scrollOnMobile {
+
     justify-content: flex-start;
     height: 90vh;
-    margin-top: 6rem;
+    margin-top: 6.75rem;
 }
 
 button {
