@@ -946,6 +946,9 @@ button {
   height: 50vh;
 }
 
+.CarouselPortComponent {  padding: 1em; }
+  .CarouselPortComponent img.CarouselItemImg {  max-height: 45vh; }
+
 
 }
 }
