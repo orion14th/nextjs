@@ -37,7 +37,7 @@ export default function Home() {
    
  
 
-    <main className="flex flex-col items-center justify-center h-screen gap-10">   
+    <main className="scrollOnMobile flex flex-col items-center justify-center h-screen gap-10">   
 
 <div className="mainDivInner w-full"> 
 <h3 class="medHeight">React</h3>

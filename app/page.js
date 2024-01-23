@@ -36,7 +36,7 @@ export default function Home() {
    
  
 
-    <main className="gapProfile1 flex flex-col items-center justify-center h-screen gap-10 ">   
+    <main className="scrollOnMobile gapProfile1 flex flex-col items-center justify-center h-screen gap-10 ">   
 
 <div className="mainDivInner w-full"> 
 <h2 className="pageTitle">Josh Gallegos<br />Playground</h2>  
