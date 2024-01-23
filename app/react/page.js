@@ -40,15 +40,14 @@ export default function Home() {
     <main className="scrollOnMobile flex flex-col items-center justify-center h-screen gap-10">   
 
 <div className="mainDivInner w-full"> 
-<h2 class=" ">React</h2>
-<h2 className="pageTitle ">Playground</h2>  
+<h2 class="pageTitle ">React<br />Playground</h2>  
 
 </div>
 
    <div className="mainDivInner w-full"> 
 
-   <p className="quoted"><a href="https://nextjs.org/" target="_blank">Next.JS</a> + <br />  
-   <a href="https://ui.shadcn.com/" target="_blank">ShadCN UI</a></p>
+   <p className="quoted"><a href="https://nextjs.org/" target="_blank">Next.JS</a>&nbsp;+&nbsp;<a href="https://ui.shadcn.com/" target="_blank">ShadCN UI</a><span class="smallHeight"> + <br />  
+   <a href="https://tailwindui.com/components" target="_blank">Tailwind CSS</a></span></p>
   </div>
 
  
@@ -67,7 +66,7 @@ export default function Home() {
      
 
 
-      <div className="container mx-auto text-center"> <Link href="./more"> <Button   variant="outline" >Ask a Question</Button>   </Link> </div>
+      <div className="container mx-auto text-center smallHeight"> <Link href="./more"> <Button   variant="outline" >Ask a Question</Button>   </Link> </div>
     
   
 
