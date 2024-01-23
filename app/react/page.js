@@ -41,13 +41,13 @@ export default function Home() {
 
 <div className="mainDivInner w-full"> 
 <h3 class=" ">React</h3>
-<h2 className="pageTitle medHeight">Playground</h2>  
+<h2 className="pageTitle ">Playground</h2>  
 
 </div>
 
    <div className="mainDivInner w-full"> 
 
-   <p className="quoted"><a href="https://nextjs.org/" target="_blank">Next.JS</a><br />+<br />
+   <p className="quoted"><a href="https://nextjs.org/" target="_blank">Next.JS</a> +&nbsp;  
    <a href="https://ui.shadcn.com/" target="_blank">ShadCN UI</a></p>
   </div>
 
@@ -62,7 +62,9 @@ export default function Home() {
       </Link></div>
      
  
-
+      <div className="container mx-auto  text-center"> <Link href="./more"> <Button variant="custom" className="min-w-44 bg-black text-white">Forms</Button>
+      </Link></div>
+     
 
 
 

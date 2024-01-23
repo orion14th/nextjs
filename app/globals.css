@@ -840,14 +840,20 @@ body {
 .hideOnMobile{
 display: none;
 }
+.scrollOnMobile {
 
+  justify-content: flex-center;
+  height: 90vh;
+  margin-top: 6.75rem;
+}
 
-
+@media (max-height:850px) {
   .scrollOnMobile {
 
     justify-content: flex-start;
-    height: 90vh;
-    margin-top: 6.75rem;
+  
+}
+
 }
 
 button {
@@ -947,7 +953,7 @@ button {
   height: 50vh;
 }
 
-.CarouselPortComponent {  padding: 1em; }
+.CarouselPortComponent {  padding: 2em; }
   .CarouselPortComponent img.CarouselItemImg {  max-height: 45vh; }
 
 
