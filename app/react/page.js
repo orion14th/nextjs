@@ -40,7 +40,7 @@ export default function Home() {
     <main className="scrollOnMobile flex flex-col items-center justify-center h-screen gap-10">   
 
 <div className="mainDivInner w-full"> 
-<h3 class=" ">React</h3>
+<h2 class=" ">React</h2>
 <h2 className="pageTitle ">Playground</h2>  
 
 </div>
