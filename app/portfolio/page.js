@@ -41,7 +41,7 @@ const myTitle='Portfolio';
 
   
   const myContentArray=['Being You App','Zachary and Sons Homes','Netwaiter','Art in the Raw','Art in the Raw','The Photography Studio','Symphonic Soul','Freightway','Freightway','Well People','Casalogy','Grander Foods'];
-  
+  const myDescriptionArray=['React + Wordpress','Portfolio Website','SEO Optimization','Podcast Content Directory','Podcast Content Directory','Portfolio Website','Information Website','Ride Share + Cargo Delivery','Ride Share + Cargo Delivery','E-Commerce','Smart Home Platform','Online Natural Food Directory'];
   
   const myLinksArray=['https://beingyouapp.com/','https://zacharyandsons.com/','https://netwaiter.net/','https://artintheraw.net/','https://artintheraw.net/','https://thephotostudio.com/','https://symphonicsoul.net/','https://freightway.co/','https://freightway.co/','https://wellpeople.com','https://casalogy.com/','https://granderfoods.com/'];
   
@@ -57,7 +57,7 @@ const myTitle='Portfolio';
         
   
 
- <LocalExternalImageSSR myTitle={myTitle} myPictureArray={images}  myPictureMobileArray={myPictureMobileArray} myContentArray={myContentArray} myLinksArray={myLinksArray} />
+ <LocalExternalImageSSR myTitle={myTitle} myPictureArray={images}  myPictureMobileArray={myPictureMobileArray} myContentArray={myContentArray} myLinksArray={myLinksArray} myDescriptionArray={myDescriptionArray} />
  
  
 

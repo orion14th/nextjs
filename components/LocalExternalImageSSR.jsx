@@ -27,7 +27,7 @@ import { TitleContext } from '@/components/TitleContext';
  
 
 
-const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArray,myLinksArray }) => {
+const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArray,myLinksArray,myDescriptionArray }) => {
 
 
 
@@ -46,6 +46,48 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
  
   const [slideStart, setSlideStart] = useState(0);
+
+
+
+  // Function to extract YouTube ID from YouTube URL
+  const extractYouTubeIdFromUrl = (url) => {
+    const match = url.match(/(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i);
+    return match ? match[1] : null;
+  };
+
+  // Function to generate YouTube thumbnail URL from ID
+  const generateThumbnailUrl = (youtubeId) => {
+    return `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+  };
+
+ 
+  // Modify URLs in myLinksArray to be YouTube thumbnail URLs
+  const newArray = myLinksArray.map((originalUrl) => {
+    const youtubeId = extractYouTubeIdFromUrl(originalUrl);
+    if (youtubeId) {
+      // Replace URL with YouTube thumbnail URL
+      return generateThumbnailUrl(youtubeId);
+    }
+    // Return unchanged URL for non-YouTube entries
+    return originalUrl;
+  });
+
+
+  const newArray2 = myLinksArray.map((originalUrl) => {
+    const youtubeId = extractYouTubeIdFromUrl(originalUrl);
+    if (youtubeId) {
+      // Replace URL with YouTube thumbnail URL
+      return youtubeId;
+    }
+    // Return unchanged URL for non-YouTube entries
+    return originalUrl;
+  });
+
+
+  // Display the modified array
+  console.log(newArray);
+  console.log(newArray2);
+
 
   useEffect(() => {
 
@@ -127,6 +169,64 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 <>
   { myLinksArray[index].indexOf('http') >-1 ? (
 
+
+
+
+
+
+
+<Card> 
+
+{ myLinksArray[index].indexOf('youtube') >-1 ? (
+
+<CardContent className="CarouselMixedSingleComponent  flex   items-center justify-center p-8">
+  
+{isLargeScreen ? (
+
+
+       
+           
+         
+                    <iframe class="youTubeCarousel" width="400" height="300" src={`https://www.youtube.com/embed/${newArray2[index]}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+             
+          
+     ):(    
+      
+  
+ 
+
+      <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={newArray[index]} alt={`Image ${index + 1}`} width={1500} height={800}   priority   />     </a>
+ 
+    
+  )}  
+
+
+
+</CardContent> 
+
+):(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <a class="removeStyles" href={myLinksArray[index]} target="_blank"  > 
 
 {isLargeScreen ? ( 
@@ -154,6 +254,8 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 
       </a>
+
+)}  </Card>
 
 ) : (
 <Link key={index} href={myLinksArray[index]}>
@@ -188,6 +290,11 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 )   }
 
     </div>
+
+    <div className="CarouselLowerDiv row-span-3 md:row-span-1"    > 
+    <p className="CarouselLowerP">{myDescriptionArray[index]}</p>
+    </div>
+
   </CarouselItem>
 ))}
 </CarouselContent>

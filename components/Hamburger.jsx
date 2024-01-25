@@ -141,13 +141,13 @@ const handleFormSubmit = async () => {
  
 
     <div className="flex items-center justify-center p-4">
-      <Link className="menuLink" href="./"  onClick={handleCloseLinkClick} >Home</Link>
+      <Link className="menuLink" href="./"  onClick={handleCloseLinkClick} >Software</Link>
       </div>
       <div className="flex items-center justify-center p-4">
-        <Link className="menuLink" href="./portfolio"  onClick={handleCloseLinkClick} >Portfolio</Link>
+        <Link className="menuLink" href="./more"  onClick={handleCloseLinkClick} >Collaborate</Link>
       </div>
       <div className="flex items-center justify-center p-4">
-        <Link className="menuLink" href="./react"  onClick={handleCloseLinkClick} >React</Link>
+        <Link className="menuLink" href="./art"  onClick={handleCloseLinkClick} >Art</Link>
       </div> 
       
       
@@ -196,13 +196,13 @@ const handleFormSubmit = async () => {
 
 
         <div className="flex items-center justify-center p-4">
-        <SheetClose asChild><Link className="menuLinkMobile" href="./"   onClick={handleCloseLinkClick}  >Home</Link> 
+        <SheetClose asChild><Link className="menuLinkMobile" href="./"   onClick={handleCloseLinkClick}  >Software</Link> 
         </SheetClose></div>      
           <div className="flex items-center justify-center p-4">
-        <SheetClose asChild><Link className="menuLinkMobile" href="./portfolio"  onClick={handleCloseLinkClick}  >Portfolio</Link> 
+        <SheetClose asChild><Link className="menuLinkMobile" href="./more"  onClick={handleCloseLinkClick}  >Collaborate</Link> 
         </SheetClose></div>
         <div className="flex items-center justify-center p-4">
-        <SheetClose asChild><Link className="menuLinkMobile" href="./react"   onClick={handleCloseLinkClick}   >React</Link> 
+        <SheetClose asChild><Link className="menuLinkMobile" href="./art"   onClick={handleCloseLinkClick}   >Art</Link> 
         </SheetClose></div>
 
       
