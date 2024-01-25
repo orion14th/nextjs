@@ -2,6 +2,7 @@
  
 
     import * as React from "react"
+    import { useSearchParams  } from 'next/navigation';
  
     import Image from 'next/image';  
     import Link from 'next/link'
@@ -109,11 +110,15 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isLargeScreenStart, setIsLargeScreenStart] = useState(false);
 
-  
+  const [slideStart, setSlideStart] = useState(0);
 
   useEffect(() => {
 
-
+    if(slideStartNum!=null){
+    setSlideStart(parsedId);
+  }else if(slideStartNum==null){
+    setSlideStart(0);
+  }
 
     const handleResize = () => {
       if(window.innerWidth >=700){
@@ -135,6 +140,15 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
   }, []);
  
       
+
+  const searchParams = useSearchParams()
+ 
+ 
+  const slideStartNum = searchParams.get('slideStart');
+  console.log('---rrrrrrrrrrrrrrrrp',searchParams);
+  console.log('---pppppppppppp',slideStartNum);
+  const parsedId = parseInt(slideStartNum, 10); 
+
   return (
 
     
@@ -166,7 +180,10 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
         Autoplay({
           delay: 7000,
         }),
-      ]):([]) }    >
+      ]):([]) }    opts={{
+        startIndex: slideStart,
+      
+      }}  >
 
       
       <CarouselContent className="CarouselMixedSingleComponentOuter -ml-1">

@@ -2,7 +2,9 @@
  
 
     import * as React from "react"
- 
+    import { useSearchParams  } from 'next/navigation';
+
+   
     import Image from 'next/image';  
     import Link from 'next/link'
  
@@ -28,6 +30,7 @@ import { TitleContext } from '@/components/TitleContext';
 const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArray,myLinksArray }) => {
 
 
+
   const { setTitle } = useContext(TitleContext);
 
   const isTitleUpdated = useRef(false); // Track title updates
@@ -35,10 +38,25 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
   const [isLoading, setIsLoading] = useState(0);
 
+
+
+
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isLargeScreenStart, setIsLargeScreenStart] = useState(false);
 
+ 
+  const [slideStart, setSlideStart] = useState(0);
+
   useEffect(() => {
+
+   
+    if(slideStartNum!=null){
+      setSlideStart(parsedId);
+    }else if(slideStartNum==null){
+      setSlideStart(0);
+    }
+
+ 
     const handleResize = () => {
       if(window.innerWidth >=700){
         setIsLargeScreen(true);    
@@ -64,7 +82,12 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
     return () => window.removeEventListener('resize', handleResize);
   }, []);
  
-
+ 
+  const searchParams = useSearchParams()
+ 
+ 
+  const slideStartNum = searchParams.get('slideStart');
+  const parsedId = parseInt(slideStartNum, 10); 
 
  
 
@@ -90,7 +113,10 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 {isLargeScreenStart ? (
 
-<Carousel className="CarouseComponent   animate__fadeIn "  >
+<Carousel className="CarouseComponent   animate__fadeIn "  opts={{
+    startIndex: slideStart,
+  
+  }}  >
 <CarouselContent className="CarouselPortComponentOuter -ml-1">
 {myPictureArray.map((regularImageUrl, index) => (
   

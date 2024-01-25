@@ -53,17 +53,17 @@ Made With React JS</p>
 
 
       <div className="container mx-auto text-center">
-     <Link href="./portfolio"> <Button variant="custom" className="bg-black text-white min-w-44">Portfolio</Button>
+     <Link href="./portfolio"> <Button variant="custom" className="bg-black text-white min-w-44">Client History</Button>
       </Link></div>
       <div className="container mx-auto  text-center"> <Link href="./react"> <Button  variant="custom" className="min-w-44 bg-black text-white">React JS</Button>
       </Link></div>
    
-      <div className="container mx-auto  text-center"> <Link href="https://symphonicsoul.net"> <Button  variant="custom" className="min-w-44 bg-black text-white">Services</Button>
+      <div className="container mx-auto  text-center"> <Link href="./latest"> <Button  variant="custom" className="min-w-44 bg-black text-white">Latest</Button>
       </Link></div>
 
 
 
-      <div className="container mx-auto text-center"> <Link href="./more"> <Button   variant="outline" >Ask a Question</Button>   </Link> </div>
+      <div className="container mx-auto text-center"> <Link href="https://symphonicsoul.net"> <Button   variant="outline" >Services</Button>   </Link> </div>
     
   
 </main>
