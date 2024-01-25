@@ -39,12 +39,12 @@ const TabsForm = () => {
   const [isLoading, setIsLoading] = useState(2);
 
 const [formData, setFormData] = useState({
-    nameSoftware: "",
-    emailSoftware: "",
-    messageSoftware: "",
-    nameArt: "",
-    emailArt: "",
-    messageArt: "",
+    nameSoftware: " ",
+    emailSoftware: " ",
+    messageSoftware: " ",
+    nameArt: " ",
+    emailArt: " ",
+    messageArt: " ",
 });
 
 
