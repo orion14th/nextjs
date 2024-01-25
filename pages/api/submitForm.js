@@ -7,10 +7,10 @@ export default async function handler(req, res) {
   const { nameSoftware, emailSoftware, messageSoftware, nameArt, emailArt, messageArt } = req.body;
 
   // Validation (replace with your logic)
-  if (!nameSoftware || !emailSoftware || !messageSoftware || !nameArt || !emailArt || !messageArt) {
-    res.status(400).json({ error: 'Incomplete form data' });
-    return;
-  }
+  //if (!nameSoftware || !emailSoftware || !messageSoftware || !nameArt || !emailArt || !messageArt) {
+    //res.status(400).json({ error: 'Incomplete form data' });
+    //return;
+  //}
 
   // Database credentials (replace with your values)
   const dbConfig = {
