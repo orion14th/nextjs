@@ -19,7 +19,14 @@
       CarouselPrevious,
     } from "@/components/ui/carousel"
 
-  
+    import {
+      Dialog,
+      DialogContent,
+      DialogDescription,
+      DialogHeader,
+      DialogTrigger,
+    } from "@/components/ui/dialog"
+    
     
 import { useContext,useEffect,useRef,useState } from 'react';
 import { TitleContext } from '@/components/TitleContext';
@@ -27,7 +34,7 @@ import { TitleContext } from '@/components/TitleContext';
  
 
 
-const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArray,myLinksArray }) => {
+const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArray,myLinksArray,myDescriptionArray }) => {
 
 
 
@@ -143,7 +150,6 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 <div className="mainDivInner hideOnMobile  row-span-3 md:row-span-1"> 
         <h2 className="pageTitle  ">{myTitle}</h2>
-   
         </div>
 
 ):( <></>   )  }
@@ -165,10 +171,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
   
   <CarouselItem key={index} className="CarouselItemComponent pl-1 sm:basis-1/1 md:basis-1/1 lg:basis-1/1">
     <div className="p-1">
-    <div className="mainDivInner  row-span-3 md:row-span-1"> <h3 className="CarouselSubtitle">{myContentArray[index]}</h3> 
-    
-    <h4 className="pageInstr  ">swipe left</h4>
-     </div>
+    <div className="mainDivInner  row-span-3 md:row-span-1"> <h3 className="CarouselSubtitle">{myContentArray[index]}</h3>  </div>
     { myLinksArray.length > 1 ? (
 <>
   { myLinksArray[index].indexOf('http') >-1 ? (
@@ -200,7 +203,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
   
  
 
-      <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg" src={newArray[index]} alt={`Image ${index + 1}`} width={1500} height={800}   priority   />     </a>
+      <a class="removeStyles" href={myLinksArray[index]} target="_blank"  >   <Image className="CarouselItemImg dfd" src={newArray[index]} alt={`Image ${index + 1}`} width={1500} height={800}   priority   />     </a>
  
     
   )}  
@@ -214,30 +217,15 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 
 
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a class="removeStyles" href={myLinksArray[index]} target="_blank"  > 
+<>
 
 {isLargeScreen ? ( 
-
+         
 <Card> 
 <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-<Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`}  width={1500} height={1500}   priority  />    
+<Image className="CarouselItemImg ddsddsd" src={regularImageUrl} alt={`Image ${index + 1}`}  width={1500} height={1500}   priority  />    
 
 
 </CardContent> 
@@ -245,35 +233,64 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 
 ):(
+  <Dialog>  <DialogTrigger>       
+
 
 <Card> 
 <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-<Image className="CarouselItemImg" src={myPictureMobileArray[index]} alt={`Image ${index + 1}`} width={1500} height={1500}  priority  />    
+<Image className="CarouselItemImg sssss" src={myPictureMobileArray[index]} alt={`Image ${index + 1}`} width={1500} height={1500}  priority  />    
 
 
 </CardContent> 
 </Card>
 
+
+
+</DialogTrigger>
+  <DialogContent className="dialogImgContent">
+    <DialogHeader>
+      
+      <DialogDescription>  <div className="min-h-screen flex items-center justify-center">
+      <div className="CarouselLowerDiv row-span-3 md:row-span-1"    > 
+    <p className="CarouselLowerP">{myDescriptionArray[index]}</p>
+    <a class="removeStyles" href={myLinksArray[index]} target="_blank"  > View</a>
+    </div>
+
+</div>   </DialogDescription>
+    </DialogHeader>
+  </DialogContent>
+</Dialog>
+
+ 
+
+
+
+
+
+
 )}
 
 
-      </a>
+      </>
 
 )}  </Card>
 
 ) : (
-<Link key={index} href={myLinksArray[index]}>
+
 
 <Card> 
         <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-            <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={1500} priority  />    
+            <Image className="CarouselItemImg fff" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={1500} priority  />    
 
 
         </CardContent> 
       </Card>
 
+ 
 
-  </Link>
+
+
+
 )
 
 }
@@ -281,19 +298,31 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 ) : (         
 
 
-
+ 
   <Card> 
         <CardContent className="CarouselPortComponent  flex   items-center justify-center p-8">
-            <Image className="CarouselItemImg" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={1500} priority  />    
+            <Image className="CarouselItemImg ddd" src={regularImageUrl} alt={`Image ${index + 1}`} width={1500} height={1500} priority  />    
 
 
         </CardContent> 
       </Card>
 
-
+     
 )   }
 
     </div>
+
+
+
+
+
+ 
+
+  
+
+
+ 
+
   </CarouselItem>
 ))}
 </CarouselContent>

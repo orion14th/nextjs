@@ -438,7 +438,7 @@ border-radius: 10px;
   position:fixed;
   z-index: 999;
  }
- 
+ h4.pageInstr {   display: none; }
  
  @media (max-width:2500) {
   .CarouselLargeComponent{
@@ -589,9 +589,7 @@ body {
     width:100%;
   }
   
-  .CarouselMain button{
-    display: none;
-  }
+ 
 
 .medHeight{
   display: none;
@@ -658,7 +656,11 @@ body {
 }
 
 @media (max-width:820px) {
-
+  .mainDivInner button {
+    display: none;
+}
+  h4.pageInstr { font-weight: normal; font-style: italic; margin: .2em; margin-bottom: .5em; display: block; }
+   h3.CarouselSubtitle { padding-bottom: 0em; }
   .CarouselMixedSingleComponent {
     width: auto;
     max-width: 100%;
@@ -771,6 +773,13 @@ body {
 
 @media (max-width:500px) {
 
+
+
+  h4.pageInstr {
+    font-size: 1em;
+}
+
+
   .pageTitle {
     font-size: 2em;
    
@@ -819,7 +828,7 @@ body {
 
 .CarouselPortComponent {
   width: auto;
-  max-width: 50vh;
+  max-width: 40vh;
   max-height: 100vh;
 }
 
@@ -954,7 +963,7 @@ button {
 }
 
 .CarouselPortComponent {  padding: 2em; }
-  .CarouselPortComponent img.CarouselItemImg {  max-height: 45vh; }
+  .CarouselPortComponent img.CarouselItemImg {  max-height: 35vh; }
 
 
 }
