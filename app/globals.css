@@ -439,6 +439,11 @@ border-radius: 10px;
   z-index: 999;
  }
  h4.pageInstr {   display: none; }
+
+ .CarouselPortLowerDiv .CarouselLowerP {
+  font-size: 1.2em;
+  font-style: italic;
+}
  
  @media (max-width:2500) {
   .CarouselLargeComponent{
@@ -584,6 +589,12 @@ body {
 
 
 @media (max-width:1024px) {
+
+
+
+  .menu-footer.fixed {
+    max-width: 30%;
+}
 
   .CarouselContainer{
     width:100%;
@@ -761,6 +772,16 @@ body {
 
 
   @media (max-width:600px) {
+
+
+.CarouselPortLowerDiv{
+  display: none;
+}
+
+    .CarouselPortComponent {
+ 
+      margin: 0 auto;
+  }
 
     .CarouselLargeComponent img {
    

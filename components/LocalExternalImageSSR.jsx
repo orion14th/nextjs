@@ -27,7 +27,7 @@ import { TitleContext } from '@/components/TitleContext';
  
 
 
-const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArray,myLinksArray }) => {
+const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArray,myLinksArray,myDescriptionArray }) => {
 
 
 
@@ -293,15 +293,37 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 )   }
 
+
+
     </div>
+
+ 
+      <div className="CarouselPortLowerDiv CarouselLowerDiv row-span-3 md:row-span-1"    > 
+    <p className="CarouselLowerP">{myDescriptionArray[index]}</p>
+    </div>
+
+ 
+
   </CarouselItem>
 ))}
+
+
+
+
 </CarouselContent>
 <CarouselPrevious />
 <CarouselNext />
 </Carousel>
 ):( <></>  ) }
-</div>  </div>
+
+
+
+</div>
+
+
+
+
+  </div>
       </>
     );
   };
