@@ -1,6 +1,6 @@
  
  import LocalExternalImageSSR from "@/components/LocalExternalImageSSR"
- 
+
 
  async function getData() {
 
@@ -50,7 +50,7 @@ const myTitle='Portfolio';
       return (
 
 
-   
+  
          
 
 <main className="scrollOnMobile CarouselMain flex flex-col items-center justify-center h-screen gap-5"> 
@@ -62,6 +62,6 @@ const myTitle='Portfolio';
  
 
  </main>
-
+ 
       )
     }

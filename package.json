@@ -27,7 +27,7 @@
     "clsx": "^2.1.0",
     "embla-carousel-autoplay": "^8.0.0-rc18",
     "embla-carousel-react": "^8.0.0-rc18",
-    "framer-motion": "^10.17.3",
+    "framer-motion": "^10.18.0",
     "lucide-react": "^0.303.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.7.0",

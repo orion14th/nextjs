@@ -163,7 +163,7 @@ img.CarouselItemImg {
   text-align: center;
 }
 
- 
+
 
 /* LOADER */
 
@@ -209,8 +209,10 @@ img.CarouselItemImg {
 
 .menu-main {
   background: #000000;
+  z-index: 9999;
+  display: none;
 }
-
+ 
 
 .menuLink {
   color: #cecece;
@@ -219,12 +221,9 @@ img.CarouselItemImg {
   text-transform: uppercase;
 }
 
-.menu-main{
-  display: none;
-}
-
-
  
+
+
 
 .menu-mobile {
   position: fixed;

@@ -42,12 +42,13 @@ export default function RootLayout({ children }) {
    
     <Hamburger />
  
-  
+   
+
  
  
   {children}
 
-  
+ 
 <FooterMain />
  
 </TitleProvider>

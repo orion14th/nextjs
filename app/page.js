@@ -1,7 +1,7 @@
 'use client'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
- 
+import Layout from "@/components/Layout"
 
 import { useContext,useEffect,useRef } from 'react';
 import { TitleContext } from '@/components/TitleContext';
@@ -34,7 +34,7 @@ export default function Home() {
   return (
  
    
- 
+    <Layout>
 
     <main className="scrollOnMobile gapProfile1 flex flex-col items-center justify-center h-screen gap-10 ">   
 
@@ -68,7 +68,7 @@ Made With React JS</p>
   
 </main>
 
-     
+</Layout>  
 
   )
 }

@@ -1,7 +1,7 @@
 'use client'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
- 
+import Layout from "@/components/Layout"
 
 import { useContext,useEffect,useRef } from 'react';
 import { TitleContext } from '@/components/TitleContext';
@@ -13,28 +13,14 @@ export default function Home() {
   const { setTitle } = useContext(TitleContext);
 
 
-  const isTitleUpdated = useRef(false); // Track title updates
+ 
   setTitle('React');
 
-  useEffect(() => {
-
-  
-
-      if (!isTitleUpdated.current) {
-          isTitleUpdated.current = true;
-          const menuMobileTitleElement = document.querySelector('.menuMobileTitle');
-          if (menuMobileTitleElement) {
-              menuMobileTitleElement.classList.add('animate__animated', 'animate__fadeIn'); // Adapt animation classes as needed
-          }
-      }
-  }, []);
  
-
-
   
   return (
  
-   
+    <Layout>
     
 
     <main className="scrollOnMobile flex flex-col items-center justify-center h-screen gap-10">   
@@ -75,6 +61,6 @@ export default function Home() {
 </main>    
 
      
-
+</Layout>
   )
 }

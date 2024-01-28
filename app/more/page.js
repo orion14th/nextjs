@@ -1,6 +1,6 @@
 'use client'
 
- 
+import Layout from "@/components/Layout"
 
 
 
@@ -14,30 +14,13 @@ export default function Home() {
 
   const { setTitle } = useContext(TitleContext);
   setTitle('More');
-
-  const isTitleUpdated = useRef(false); // Track title updates
-
-  useEffect(() => {
-
-
-
-      if (!isTitleUpdated.current) {
-          isTitleUpdated.current = true;
-          const menuMobileTitleElement = document.querySelector('.menuMobileTitle');
-          if (menuMobileTitleElement) {
-              menuMobileTitleElement.classList.add('animate__animated', 'animate__fadeIn'); // Adapt animation classes as needed
-          }
-      }
-  }, []);
-
-
-
+ 
 
 
   
 
   return (
-
+    <Layout>
     <main className="flex flex-col items-center justify-center h-screen gap-10 ">   
 
  
@@ -61,7 +44,7 @@ export default function Home() {
    
 </main>
 
-
+</Layout>
      
 
   )
