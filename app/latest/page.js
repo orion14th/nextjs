@@ -111,11 +111,13 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
 
   useEffect(() => {
 
+    if(slideStartNum){
     if(slideStartNum!=null){
     setSlideStart(parsedId);
   }else if(slideStartNum==null){
     setSlideStart(0);
   }
+}
 
     const handleResize = () => {
       if(window.innerWidth >=700){
