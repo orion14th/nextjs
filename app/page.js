@@ -13,23 +13,8 @@ export default function Home() {
   const { setTitle } = useContext(TitleContext);
   setTitle('Home');
 
-  const isTitleUpdated = useRef(false); // Track title updates
-
-  useEffect(() => {
-
  
-
-      if (!isTitleUpdated.current) {
-          isTitleUpdated.current = true;
-          const menuMobileTitleElement = document.querySelector('.menuMobileTitle');
-          if (menuMobileTitleElement) {
-              menuMobileTitleElement.classList.add('animate__animated', 'animate__fadeIn'); // Adapt animation classes as needed
-          }
-      }
-  }, []);
  
-
-
   
   return (
  
@@ -63,7 +48,7 @@ Made With React JS</p>
 
 
 
-      <div className="container mx-auto text-center"> <Link  className="buttonAnimate1" href="https://symphonicsoul.net"  className="buttonAnimate1"> <Button   variant="outline" >Services</Button>   </Link> </div>
+      <div className="container mx-auto text-center"> <Link  className="buttonAnimate1" href="https://symphonicsoul.net"   > <Button   variant="outline" >Services</Button>   </Link> </div>
     
   
 </main>
