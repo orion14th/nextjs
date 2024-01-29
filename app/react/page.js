@@ -41,13 +41,13 @@ export default function Home() {
 
 
       <div className="container mx-auto text-center">
-     <Link href="./api-wordpress"> <Button variant="custom" className="min-w-44  bg-black text-white">Client Side Api</Button>
+     <Link href="./api-wordpress"> <Button variant="custom" className="min-w-44  bg-black text-white buttonAnimate1">Client Side Api</Button>
       </Link></div>
-      <div className="container mx-auto  text-center"> <Link href="./api-external-ssr"> <Button variant="custom" className="min-w-44 bg-black text-white">Server Side Api</Button>
+      <div className="container mx-auto  text-center"> <Link href="./api-external-ssr"> <Button variant="custom" className="min-w-44 bg-black text-white buttonAnimate1">Server Side Api</Button>
       </Link></div>
      
  
-      <div className="container mx-auto  text-center"> <Link href="./more"> <Button variant="custom" className="min-w-44 bg-black text-white">Forms</Button>
+      <div className="container mx-auto  text-center"> <Link href="./more"> <Button variant="custom" className="min-w-44 bg-black text-white buttonAnimate1">Forms</Button>
       </Link></div>
      
 

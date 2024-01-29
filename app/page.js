@@ -53,17 +53,17 @@ Made With React JS</p>
 
 
       <div className="container mx-auto text-center">
-     <Link href="./portfolio"> <Button variant="custom" className="bg-black text-white min-w-44">Client History</Button>
+     <Link href="./portfolio"  > <Button variant="custom" className="bg-black text-white min-w-44 buttonAnimate1">Client History</Button>
       </Link></div>
-      <div className="container mx-auto  text-center"> <Link href="./react"> <Button  variant="custom" className="min-w-44 bg-black text-white">React JS</Button>
+      <div className="container mx-auto  text-center"> <Link href="./react"  className="buttonAnimate1"> <Button  variant="custom" className="min-w-44 bg-black text-white buttonAnimate1">React JS</Button>
       </Link></div>
    
-      <div className="container mx-auto  text-center"> <Link href="./latest"> <Button  variant="custom" className="min-w-44 bg-black text-white">Latest</Button>
+      <div className="container mx-auto  text-center"> <Link href="./latest"> <Button  variant="custom" className="min-w-44 bg-black text-white buttonAnimate1">Latest</Button>
       </Link></div>
 
 
 
-      <div className="container mx-auto text-center"> <Link href="https://symphonicsoul.net"> <Button   variant="outline" >Services</Button>   </Link> </div>
+      <div className="container mx-auto text-center"> <Link  className="buttonAnimate1" href="https://symphonicsoul.net"  className="buttonAnimate1"> <Button   variant="outline" >Services</Button>   </Link> </div>
     
   
 </main>
