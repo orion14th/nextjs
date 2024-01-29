@@ -3,18 +3,13 @@ import { motion } from "framer-motion"
 const Layout = ({ children }) => {
   return (
     <motion.div
-    className="box"
-    initial={{ opacity: 0, scale: 0.5 }}
+    initial={{ opacity: 0, scale: 0.95 }}
     animate={{ opacity: 1, scale: 1 }}
-    transition={{
-      duration: 0.8,
-      delay: 0,
-      ease: [0, 0.71, 0.2, 1.01]
-    }}
-  
-    >
-      {children}
-    </motion.div>
+    exit={{ opacity: 0, scale: 0.95 }}
+    transition={{ duration: 0.3, ease: 'easeInOut' }}
+  >
+    {children}
+  </motion.div>
   )
 }
 
