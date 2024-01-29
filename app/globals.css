@@ -666,9 +666,10 @@ body {
 }
 
 @media (max-width:820px) {
-  .mainDivInner button.inline-flex {
+ .CarouseComponent button {
     display: none;
 }
+ 
   h4.pageInstr { font-weight: normal; font-style: italic; margin: .2em; margin-bottom: .5em; display: block; }
    h3.CarouselSubtitle { padding-bottom: 0em; }
   .CarouselMixedSingleComponent {
