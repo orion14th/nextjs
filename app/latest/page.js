@@ -102,22 +102,30 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
 
 
   const searchParams = useSearchParams()
- 
- 
   const slideStartNum = searchParams.get('slideStart');
  
-  const parsedId = parseInt(slideStartNum, 10); 
+
+ 
+const setSlideStartFunction = () => {
 
 
-  useEffect(() => {
 
-    if(slideStartNum){
+
+  if(slideStartNum){
     if(slideStartNum!=null){
+      const parsedId = parseInt(slideStartNum, 10); 
     setSlideStart(parsedId);
   }else if(slideStartNum==null){
     setSlideStart(0);
   }
 }
+
+}
+
+
+  useEffect(() => {
+
+    setSlideStartFunction();
 
     const handleResize = () => {
       if(window.innerWidth >=700){
