@@ -91,18 +91,6 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
   const isTitleUpdated = useRef(false); // Track title updates
   setTitle('Latest');
 
-  useEffect(() => {
-
-
-
-      if (!isTitleUpdated.current) {
-          isTitleUpdated.current = true;
-          const menuMobileTitleElement = document.querySelector('.menuMobileTitle');
-          if (menuMobileTitleElement) {
-              menuMobileTitleElement.classList.add('animate__animated', 'animate__fadeIn'); // Adapt animation classes as needed
-          }
-      }
-  }, []);
  
 
   const [isLoading, setIsLoading] = useState(0);
@@ -111,6 +99,15 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
   const [isLargeScreenStart, setIsLargeScreenStart] = useState(false);
 
   const [slideStart, setSlideStart] = useState(0);
+
+
+  const searchParams = useSearchParams()
+ 
+ 
+  const slideStartNum = searchParams.get('slideStart');
+ 
+  const parsedId = parseInt(slideStartNum, 10); 
+
 
   useEffect(() => {
 
@@ -141,13 +138,7 @@ const myLinksArray=['./art','https://www.youtube.com/watch?v=3C35wsHrabg','https
  
       
 
-  const searchParams = useSearchParams()
- 
- 
-  const slideStartNum = searchParams.get('slideStart');
-  console.log('---rrrrrrrrrrrrrrrrp',searchParams);
-  console.log('---pppppppppppp',slideStartNum);
-  const parsedId = parseInt(slideStartNum, 10); 
+
 
   return (
 

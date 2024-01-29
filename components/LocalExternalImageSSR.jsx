@@ -49,6 +49,13 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 
 
+  const searchParams = useSearchParams()
+ 
+ 
+  const slideStartNum = searchParams.get('slideStart');
+  const parsedId = parseInt(slideStartNum, 10); 
+
+
   // Function to extract YouTube ID from YouTube URL
   const extractYouTubeIdFromUrl = (url) => {
     const match = url.match(/(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i);
@@ -85,8 +92,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
 
 
   // Display the modified array
-  console.log(newArray);
-  console.log(newArray2);
+ 
 
 
   useEffect(() => {
@@ -108,7 +114,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
       }else if(window.innerHeight>950){
         setIsLargeScreen(true);    
       }
-      console.log('2222222');
+     
     }
 
   
@@ -125,11 +131,7 @@ const ImageSlider = ({ myTitle,myPictureArray,myPictureMobileArray,myContentArra
   }, []);
  
  
-  const searchParams = useSearchParams()
- 
- 
-  const slideStartNum = searchParams.get('slideStart');
-  const parsedId = parseInt(slideStartNum, 10); 
+
 
  
 
