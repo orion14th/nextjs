@@ -439,14 +439,6 @@ border-radius: 10px;
 }
  
  
-.buttonAnimate1 {
-  transition: all 0.3s ease-in-out;
-}
-
-.buttonAnimate1:hover {
-  transform: scale(1.1);
- 
-}
 
 
 .menuLink {
@@ -460,22 +452,6 @@ border-radius: 10px;
 }
 
 
-
- 
-
-.buttonAnimate2 {
-  transition: all 0.3s ease-in-out;
-}
-
-.buttonAnimate2:hover {
-  transform: scale(1.1);
-  color: #3b2b2b;
- 
-  background: #ccc;
-  border-radius: 30px;
- 
- 
-}
 
 
 
@@ -606,12 +582,43 @@ body {
   }
   
 
+/* MENU MOBILE HIDE */
+
   .menu-mobile{
     display: none;
   }
   .menu-main{
     display: block;
   }
+
+
+
+/* ANIMATIONS */
+
+.buttonAnimate1 {
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonAnimate1:hover {
+  transform: scale(1.1);
+ 
+}
+
+
+.buttonAnimate2 {
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonAnimate2:hover {
+  transform: scale(1.1);
+  color: #3b2b2b;
+ 
+  background: #ccc;
+  border-radius: 30px;
+ 
+ 
+}
+
 
 
 
