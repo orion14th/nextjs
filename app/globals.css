@@ -214,12 +214,6 @@ img.CarouselItemImg {
 }
  
 
-.menuLink {
-  color: #cecece;
-  font-size: 1.3em;
-  font-weight: 500;
-  text-transform: uppercase;
-}
 
  
 
@@ -453,6 +447,36 @@ border-radius: 10px;
   transform: scale(1.1);
  
 }
+
+
+.menuLink {
+  color: #cecece;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 250px;
+  padding: .3em;
+}
+
+
+
+ 
+
+.buttonAnimate2 {
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonAnimate2:hover {
+  transform: scale(1.1);
+  color: #3b2b2b;
+ 
+  background: #ccc;
+  border-radius: 30px;
+ 
+ 
+}
+
 
 
  @media (max-width:2500) {

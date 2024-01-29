@@ -141,13 +141,13 @@ const handleFormSubmit = async () => {
  
 
     <div className="flex items-center justify-center p-4">
-      <Link className="menuLink" href="./"  onClick={handleCloseLinkClick} >Software</Link>
+      <Link className="menuLink buttonAnimate2" href="./"  onClick={handleCloseLinkClick} >Software</Link>
       </div>
       <div className="flex items-center justify-center p-4">
-        <Link className="menuLink" href="./more"  onClick={handleCloseLinkClick} >Collaborate</Link>
+        <Link className="menuLink buttonAnimate2" href="./more"  onClick={handleCloseLinkClick} >Collaborate</Link>
       </div>
       <div className="flex items-center justify-center p-4">
-        <Link className="menuLink" href="./art"  onClick={handleCloseLinkClick} >Art</Link>
+        <Link className="menuLink buttonAnimate2" href="./art"  onClick={handleCloseLinkClick} >Art</Link>
       </div> 
       
       
